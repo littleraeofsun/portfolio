@@ -32,14 +32,14 @@ namespace Rae.Website.Controllers
 
         [HttpGet()]
         [Route("api/Media/ByProject/{id}")]
-        public HttpResponseMessage GetProjectMedia(int id)
+        public HttpResponseMessage GetMediaByProject(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, media.GetByProject(id));
         }
 
         [HttpGet()]
         [Route("api/Media/ByAlbum/{id}")]
-        public HttpResponseMessage GetAlbumMedia(int id)
+        public HttpResponseMessage GetMediaByAlbum(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, media.GetByAlbum(id));
         }
@@ -54,21 +54,21 @@ namespace Rae.Website.Controllers
         }
         [HttpGet()]
         [Route("api/Images/{id}")]
-        public HttpResponseMessage GetAllImages(int id)
+        public HttpResponseMessage GetImageById(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, images.Get(id));
         }
 
         [HttpGet()]
         [Route("api/Images/ByProject/{id}")]
-        public HttpResponseMessage GetProjectImages(int id)
+        public HttpResponseMessage GetImagesByProject(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, images.GetByProject(id));
         }
 
         [HttpGet()]
         [Route("api/Images/ByAlbum/{id}")]
-        public HttpResponseMessage GetAlbumImages(int id)
+        public HttpResponseMessage GetImagesByAlbum(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, images.GetByAlbum(id));
         }
@@ -83,21 +83,21 @@ namespace Rae.Website.Controllers
         }
         [HttpGet()]
         [Route("api/Audio/{id}")]
-        public HttpResponseMessage GetAllAudio(int id)
+        public HttpResponseMessage GetAudioById(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, audio.Get(id));
         }
 
         [HttpGet()]
         [Route("api/Audio/ByProject/{id}")]
-        public HttpResponseMessage GetProjectAudio(int id)
+        public HttpResponseMessage GetAudioByProject(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, audio.GetByProject(id));
         }
 
         [HttpGet()]
         [Route("api/Audio/ByAlbum/{id}")]
-        public HttpResponseMessage GetAlbumAudio(int id)
+        public HttpResponseMessage GetAudioByAlbum(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, audio.GetByAlbum(id));
         }
@@ -112,21 +112,21 @@ namespace Rae.Website.Controllers
         }
         [HttpGet()]
         [Route("api/Video/{id}")]
-        public HttpResponseMessage GetAllVideo(int id)
+        public HttpResponseMessage GetVideoById(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, video.Get(id));
         }
 
         [HttpGet()]
         [Route("api/Video/ByProject/{id}")]
-        public HttpResponseMessage GetProjectVideo(int id)
+        public HttpResponseMessage GetVideoByProject(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, video.GetByProject(id));
         }
 
         [HttpGet()]
         [Route("api/Video/ByAlbum/{id}")]
-        public HttpResponseMessage GetAlbumVideo(int id)
+        public HttpResponseMessage GetVideoByAlbum(int id)
         {
             return Request.CreateResponse(HttpStatusCode.OK, video.GetByAlbum(id));
         }
