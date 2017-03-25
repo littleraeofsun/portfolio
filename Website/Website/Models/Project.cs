@@ -4,9 +4,6 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Rae.Website.Models
 {
-    [System.Flags]
-    public enum Category { Desktop, Website, Branding, Content, Other }
-
     public class Project
     {
 
@@ -24,8 +21,9 @@ namespace Rae.Website.Models
 
         [StringLength(2000)]
         public string Description { get; set; }
-        
-        public Category Categories { get; set; }
+
+        [StringLength(200)]
+        public string Categories { get; set; }
         
         public virtual List<Media> Media { get; set; }
     }

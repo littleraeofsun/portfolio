@@ -23,9 +23,9 @@ namespace Rae.Website.Models.Repositories
             context = Context;
         }
 
-        public virtual List<T> GetAll()
+        public virtual IQueryable<T> GetAll()
         {
-            return dbSet.ToList();
+            return dbSet;
         }
 
         public virtual T Get(int Id)

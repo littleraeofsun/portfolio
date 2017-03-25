@@ -4,23 +4,41 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
-    <title></title>
+    <title>Test Page</title>
+    <link href="styles/jquery.json-viewer.css" rel="stylesheet" />
+    <style type="text/css">
+        .result.success {
+            background: #eeffdd;
+        }
+
+        .result {
+            padding: 6px;
+        }
+
+        .result.error {
+            background: #ffeeee;
+        }
+
+        body {
+            font-family: Arial;
+        }
+    </style>
 </head>
 <body>
     <form id="form1" runat="server">
     <div>
-        <p>Project count: <%= projectCount %></p>
+        <h2>Portfolio Tests</h2>
+        <div id="TestResults"></div>
     </div>
     </form>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
+    <script src="Scripts/jquery.json-viewer.js"></script>
     <script type="text/javascript">
         var urlsToTest = [
-            'http://localhost:57723/api/Project',
-            'http://localhost:57723/api/Album',
-            'http://localhost:57723/api/Media/GetAllMedia',
-            'http://localhost:57723/api/Media/GetAllImages',
-            'http://localhost:57723/api/Media/GetProjectImages/1',
-            'http://localhost:57723/api/Media/GetAlbumImages/1',
+            'http://localhost:57723/api/Projects',
+            'http://localhost:57723/api/Albums',
+            'http://localhost:57723/api/Media',
+            'http://localhost:57723/api/Fail',
         ];
         $(document).ready(function () {
             for (var i = 0; i < urlsToTest.length; i++) {
@@ -33,12 +51,20 @@
                 type: 'GET',
                 dataType: 'json',
                 success: function (data) {
-                    console.info("Succesful result for '" + this.url + "':");
-                    console.info(data);
+                    var result = $('<div class="result success"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
+                    result.children('.result-data').jsonViewer(data);
+                    $('#TestResults').append(result);
+                    result.children('.result-title').click(function () {
+                        $(this).next().toggle();
+                    });
                 },
                 error: function (x, y, z) {
-                    console.warn("Unsuccessful result for '" + this.url + "':");
-                    console.warn(x + '\n' + y + '\n' + z);
+                    var result = $('<div class="result error"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
+                    result.children('.result-data').jsonViewer({ x: x, y: y, z: z });
+                    $('#TestResults').append(result);
+                    result.children('.result-title').click(function () {
+                        $(this).next().toggle();
+                    });
                 }
             });
         }
