@@ -159,25 +159,22 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
-    <Compile Include="Controllers\ImageController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
-    <Compile Include="Controllers\PhotoController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="GlimpseSecurityPolicy.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Album.cs" />
-    <Compile Include="Models\Photo.cs" />
+    <Compile Include="Models\Video.cs" />
+    <Compile Include="Models\Audio.cs" />
     <Compile Include="Models\Image.cs" />
     <Compile Include="Models\Media.cs" />
     <Compile Include="Models\PortfolioContext.cs" />
     <Compile Include="Models\PortfolioDataContextInitializer.cs" />
     <Compile Include="Models\Project.cs" />
     <Compile Include="Models\Repositories\AlbumRepository.cs" />
-    <Compile Include="Models\Repositories\PhotoRepository.cs" />
     <Compile Include="Models\Repositories\MediaRepository.cs" />
-    <Compile Include="Models\Repositories\ImageRepository.cs" />
     <Compile Include="Models\Repositories\ProjectRepository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

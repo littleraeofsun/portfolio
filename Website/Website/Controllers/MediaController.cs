@@ -1,4 +1,5 @@
-﻿using Rae.Website.Models.Repositories;
+﻿using Rae.Website.Models;
+using Rae.Website.Models.Repositories;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,6 +13,7 @@ namespace Rae.Website.Controllers
     {
         MediaRepository media = new MediaRepository();
 
+        #region Generic Actions
         [HttpGet()]
         [Route("api/Media/GetAllMedia")]
         public HttpResponseMessage GetAllMedia()
@@ -25,5 +27,36 @@ namespace Rae.Website.Controllers
         {
             return Request.CreateResponse(HttpStatusCode.OK, media.GetProjectMedia(ProjectId));
         }
+
+        [HttpGet()]
+        [Route("api/Media/GetAlbumMedia/{AlbumId}")]
+        public HttpResponseMessage GetAlbumMedia(int AlbumId)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetAlbumMedia(AlbumId));
+        }
+        #endregion
+
+        #region Image Actions
+        [HttpGet()]
+        [Route("api/Media/GetAllImages")]
+        public HttpResponseMessage GetAllImages()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetAllMediaOfType<Image>());
+        }
+
+        [HttpGet()]
+        [Route("api/Media/GetProjectImages/{ProjectId}")]
+        public HttpResponseMessage GetProjectImages(int ProjectId)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetProjectMediaOfType<Image>(ProjectId));
+        }
+
+        [HttpGet()]
+        [Route("api/Media/GetAlbumImages/{AlbumId}")]
+        public HttpResponseMessage GetAlbumImages(int AlbumId)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetAlbumMediaOfType<Image>(AlbumId));
+        }
+        #endregion
     }
 }

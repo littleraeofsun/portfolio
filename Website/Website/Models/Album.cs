@@ -16,7 +16,7 @@ namespace Rae.Website.Models
         
         [StringLength(1000)]
         public string Description { get; set; }
-        
-        public virtual List<Photo> Photos { get; set; }
+
+        public virtual List<Media> Media { get; set; }
     }
 }

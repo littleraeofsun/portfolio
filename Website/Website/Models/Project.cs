@@ -26,8 +26,7 @@ namespace Rae.Website.Models
         public string Description { get; set; }
         
         public Category Categories { get; set; }
-
-        public virtual List<Image> Images { get; set; }
+        
         public virtual List<Media> Media { get; set; }
     }
 }

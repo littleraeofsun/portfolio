@@ -6,7 +6,7 @@ using System.Web;
 
 namespace Rae.Website.Models
 {
-    public class Media
+    public abstract class Media
     {
         public int MediaId { get; set; }
 
@@ -17,11 +17,10 @@ namespace Rae.Website.Models
         [StringLength(500)]
         public string Description { get; set; }
 
-        [Required]
-        [StringLength(255)]
-        public string Url { get; set; }
-
-        public int ProjectId { get; set; }
+        public int? ProjectId { get; set; }
         public virtual Project Project { get; set; }
+        
+        public int? AlbumId { get; set; }
+        public virtual Album Album { get; set; }
     }
 }

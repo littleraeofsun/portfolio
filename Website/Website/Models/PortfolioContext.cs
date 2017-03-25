@@ -3,12 +3,10 @@
 namespace Rae.Website.Models
 {
     public class PortfolioContext : DbContext
-    {
+    { 
         public DbSet<Project> Projects { get; set; }
         public DbSet<Album> Albums { get; set; }
-        public DbSet<Image> Images { get; set; }
         public DbSet<Media> Media { get; set; }
-        public DbSet<Photo> Photos { get; set; }
 
         public PortfolioContext()
         {
@@ -18,8 +16,7 @@ namespace Rae.Website.Models
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            //modelBuilder.Entity<Image>().HasRequired(i => i.Project).WithMany(p => p.Images).HasForeignKey(i => i.ProjectId).WillCascadeOnDelete(false);
-            //modelBuilder.Entity<Image>().HasRequired(i => i.Album).WithMany(a => a.Images).HasForeignKey(i => i.AlbumId).WillCascadeOnDelete(false);
+            //FluentApi configuration goes here
         }
     }
 }

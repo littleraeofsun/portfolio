@@ -17,11 +17,10 @@
         var urlsToTest = [
             'http://localhost:57723/api/Project',
             'http://localhost:57723/api/Album',
-            'http://localhost:57723/api/Image/GetAllImages',
             'http://localhost:57723/api/Media/GetAllMedia',
-            'http://localhost:57723/api/Photo/GetAllPhotos',
-            'http://localhost:57723/api/Image/GetProjectImages/1',
-            'http://localhost:57723/api/Photo/GetAlbumPhotos/1',
+            'http://localhost:57723/api/Media/GetAllImages',
+            'http://localhost:57723/api/Media/GetProjectImages/1',
+            'http://localhost:57723/api/Media/GetAlbumImages/1',
         ];
         $(document).ready(function () {
             for (var i = 0; i < urlsToTest.length; i++) {
