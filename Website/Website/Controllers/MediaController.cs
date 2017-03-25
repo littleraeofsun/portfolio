@@ -18,118 +18,116 @@ namespace Rae.Website.Controllers
 
         #region Generic Actions
         [HttpGet()]
-        [Route("api/Media")]
-        public HttpResponseMessage GetAllMedia()
+        [Route("api/Media/{type}")]
+        public HttpResponseMessage GetAllMedia(string type)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, media.GetAll());
+            HttpResponseMessage result = null;
+            switch (type.ToLower())
+            {
+                case "all":
+                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetAll());
+                    break;
+                case "images":
+                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetAll());
+                    break;
+                case "audio":
+                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetAll());
+                    break;
+                case "video":
+                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetAll());
+                    break;
+                default:
+                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
+                    break;
+            }
+            return result;
         }
         [HttpGet()]
-        [Route("api/Media/{id}")]
-        public HttpResponseMessage GetMediaById(int id)
+        [Route("api/Media/{type}/{id}")]
+        public HttpResponseMessage GetMediaById(string type, int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, media.Get(id));
+            HttpResponseMessage result = null;
+            switch (type.ToLower())
+            {
+                case "all":
+                    result = Request.CreateResponse(HttpStatusCode.OK, media.Get(id));
+                    break;
+                case "images":
+                    result = Request.CreateResponse(HttpStatusCode.OK, images.Get(id));
+                    break;
+                case "audio":
+                    result = Request.CreateResponse(HttpStatusCode.OK, audio.Get(id));
+                    break;
+                case "video":
+                    result = Request.CreateResponse(HttpStatusCode.OK, video.Get(id));
+                    break;
+                default:
+                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
+                    break;
+            }
+            return result;
         }
 
         [HttpGet()]
-        [Route("api/Media/ByProject/{id}")]
-        public HttpResponseMessage GetMediaByProject(int id)
+        [Route("api/Media/{type}/ByProject/{id}")]
+        public HttpResponseMessage GetMediaByProject(string type, int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, media.GetByProject(id));
+            HttpResponseMessage result = null;
+            switch (type.ToLower())
+            {
+                case "all":
+                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetByProject(id));
+                    break;
+                case "images":
+                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetByProject(id));
+                    break;
+                case "audio":
+                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetByProject(id));
+                    break;
+                case "video":
+                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetByProject(id));
+                    break;
+                default:
+                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
+                    break;
+            }
+            return result;
         }
 
         [HttpGet()]
-        [Route("api/Media/ByAlbum/{id}")]
-        public HttpResponseMessage GetMediaByAlbum(int id)
+        [Route("api/Media/{type}/ByAlbum/{id}")]
+        public HttpResponseMessage GetMediaByAlbum(string type, int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, media.GetByAlbum(id));
+            HttpResponseMessage result = null;
+            switch (type.ToLower())
+            {
+                case "all":
+                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetByAlbum(id));
+                    break;
+                case "images":
+                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetByAlbum(id));
+                    break;
+                case "audio":
+                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetByAlbum(id));
+                    break;
+                case "video":
+                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetByAlbum(id));
+                    break;
+                default:
+                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
+                    break;
+            }
+            return result;
         }
         #endregion
 
         #region Image Actions
-        [HttpGet()]
-        [Route("api/Images")]
-        public HttpResponseMessage GetAllImages()
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, images.GetAll());
-        }
-        [HttpGet()]
-        [Route("api/Images/{id}")]
-        public HttpResponseMessage GetImageById(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, images.Get(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Images/ByProject/{id}")]
-        public HttpResponseMessage GetImagesByProject(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, images.GetByProject(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Images/ByAlbum/{id}")]
-        public HttpResponseMessage GetImagesByAlbum(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, images.GetByAlbum(id));
-        }
         #endregion
 
         #region Audio Actions
-        [HttpGet()]
-        [Route("api/Audio")]
-        public HttpResponseMessage GetAllAudio()
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, audio.GetAll());
-        }
-        [HttpGet()]
-        [Route("api/Audio/{id}")]
-        public HttpResponseMessage GetAudioById(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, audio.Get(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Audio/ByProject/{id}")]
-        public HttpResponseMessage GetAudioByProject(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, audio.GetByProject(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Audio/ByAlbum/{id}")]
-        public HttpResponseMessage GetAudioByAlbum(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, audio.GetByAlbum(id));
-        }
         #endregion
 
         #region Video Actions
-        [HttpGet()]
-        [Route("api/Video")]
-        public HttpResponseMessage GetAllVideo()
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, video.GetAll());
-        }
-        [HttpGet()]
-        [Route("api/Video/{id}")]
-        public HttpResponseMessage GetVideoById(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, video.Get(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Video/ByProject/{id}")]
-        public HttpResponseMessage GetVideoByProject(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, video.GetByProject(id));
-        }
-
-        [HttpGet()]
-        [Route("api/Video/ByAlbum/{id}")]
-        public HttpResponseMessage GetVideoByAlbum(int id)
-        {
-            return Request.CreateResponse(HttpStatusCode.OK, video.GetByAlbum(id));
-        }
         #endregion
     }
 }
