@@ -1,0 +1,70 @@
+﻿body {
+    font-family: 'Montserrat', sans-serif;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+#NavLogo {
+    height: 50px;
+    margin: 10px 0;
+    position: relative;
+    top: 4px;
+}
+#MainDisplay {
+    display: table;
+}
+#MainHeader {
+    display: table-row;
+    background: url(../images/sunrise-large.jpg) no-repeat center bottom;
+    background-size: cover;
+    height: 600px;
+}
+#MainHeaderText{
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+    color: #00738c;
+}
+#MainHeaderText .floating-text {    
+    background: rgba(255,255,255,0.65);
+    margin: auto;
+    display: inline-block;
+    padding: 40px 80px;
+}
+#MainHeaderText .title {
+    font-size: 6em;
+    font-weight: 700;
+}
+#MainHeaderText .tagline {
+    font-size: 3.4em;
+    font-weight: 600;
+}
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+.navbar-nav>li>a {
+    line-height: 44px;
+}
+#MainNav, #MainNav *{
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+#MainNav {
+    padding: 20px 30px;
+}
+#MainNav.scrolled {
+    background-color: white;
+    padding: 0;
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters .col, .no-gutters [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
