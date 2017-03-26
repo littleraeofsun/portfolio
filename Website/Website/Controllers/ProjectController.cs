@@ -12,6 +12,10 @@ namespace Rae.Website.Controllers
     public class ProjectController : ApiController
     {
         ProjectRepository repository = new ProjectRepository();
+        MediaRepository<Media> media = new MediaRepository<Media>();
+        ImageRepository images = new ImageRepository();
+        AudioRepository audio = new AudioRepository();
+        VideoRepository video = new VideoRepository();
 
         [HttpGet()]
         [Route("api/Projects")]
@@ -28,10 +32,31 @@ namespace Rae.Website.Controllers
         }
 
         [HttpGet()]
-        [Route("api/Projects/{title}")]
-        public HttpResponseMessage GetProjectByTitle(string title)
+        [Route("api/Projects/{id}/Media")]
+        public HttpResponseMessage GetProjectMedia(int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, repository.GetByTitle(title));
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetByProject(id));
+        }
+
+        [HttpGet()]
+        [Route("api/Projects/{id}/Images")]
+        public HttpResponseMessage GetProjectImages(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, images.GetByProject(id));
+        }
+
+        [HttpGet()]
+        [Route("api/Projects/{id}/Audio")]
+        public HttpResponseMessage GetProjectAudio(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, audio.GetByProject(id));
+        }
+
+        [HttpGet()]
+        [Route("api/Projects/{id}/Video")]
+        public HttpResponseMessage GetProjectVideo(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, video.GetByProject(id));
         }
     }
 }

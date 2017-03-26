@@ -18,116 +18,62 @@ namespace Rae.Website.Controllers
 
         #region Generic Actions
         [HttpGet()]
-        [Route("api/Media/{type}")]
-        public HttpResponseMessage GetAllMedia(string type)
+        [Route("api/Media")]
+        public HttpResponseMessage GetAllMedia()
         {
-            HttpResponseMessage result = null;
-            switch (type.ToLower())
-            {
-                case "all":
-                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetAll());
-                    break;
-                case "images":
-                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetAll());
-                    break;
-                case "audio":
-                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetAll());
-                    break;
-                case "video":
-                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetAll());
-                    break;
-                default:
-                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
-                    break;
-            }
-            return result;
+            return Request.CreateResponse(HttpStatusCode.OK, media.GetAll());
         }
         [HttpGet()]
-        [Route("api/Media/{type}/{id}")]
-        public HttpResponseMessage GetMediaById(string type, int id)
+        [Route("api/Media/{id}")]
+        public HttpResponseMessage GetMediaById(int id)
         {
-            HttpResponseMessage result = null;
-            switch (type.ToLower())
-            {
-                case "all":
-                    result = Request.CreateResponse(HttpStatusCode.OK, media.Get(id));
-                    break;
-                case "images":
-                    result = Request.CreateResponse(HttpStatusCode.OK, images.Get(id));
-                    break;
-                case "audio":
-                    result = Request.CreateResponse(HttpStatusCode.OK, audio.Get(id));
-                    break;
-                case "video":
-                    result = Request.CreateResponse(HttpStatusCode.OK, video.Get(id));
-                    break;
-                default:
-                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
-                    break;
-            }
-            return result;
-        }
-
-        [HttpGet()]
-        [Route("api/Media/{type}/ByProject/{id}")]
-        public HttpResponseMessage GetMediaByProject(string type, int id)
-        {
-            HttpResponseMessage result = null;
-            switch (type.ToLower())
-            {
-                case "all":
-                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetByProject(id));
-                    break;
-                case "images":
-                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetByProject(id));
-                    break;
-                case "audio":
-                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetByProject(id));
-                    break;
-                case "video":
-                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetByProject(id));
-                    break;
-                default:
-                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
-                    break;
-            }
-            return result;
-        }
-
-        [HttpGet()]
-        [Route("api/Media/{type}/ByAlbum/{id}")]
-        public HttpResponseMessage GetMediaByAlbum(string type, int id)
-        {
-            HttpResponseMessage result = null;
-            switch (type.ToLower())
-            {
-                case "all":
-                    result = Request.CreateResponse(HttpStatusCode.OK, media.GetByAlbum(id));
-                    break;
-                case "images":
-                    result = Request.CreateResponse(HttpStatusCode.OK, images.GetByAlbum(id));
-                    break;
-                case "audio":
-                    result = Request.CreateResponse(HttpStatusCode.OK, audio.GetByAlbum(id));
-                    break;
-                case "video":
-                    result = Request.CreateResponse(HttpStatusCode.OK, video.GetByAlbum(id));
-                    break;
-                default:
-                    result = Request.CreateResponse(HttpStatusCode.BadRequest, "'" + type + "' is not a valid Action.");
-                    break;
-            }
-            return result;
+            return Request.CreateResponse(HttpStatusCode.OK, media.Get(id));
         }
         #endregion
 
         #region Image Actions
+        [HttpGet()]
+        [Route("api/Images")]
+        public HttpResponseMessage GetAllImages()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, images.GetAll());
+        }
+        [HttpGet()]
+        [Route("api/Images/{id}")]
+        public HttpResponseMessage GetImageById(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, images.Get(id));
+        }
         #endregion
 
         #region Audio Actions
+        [HttpGet()]
+        [Route("api/Audio")]
+        public HttpResponseMessage GetAllAudio()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, audio.GetAll());
+        }
+        [HttpGet()]
+        [Route("api/Audio/{id}")]
+        public HttpResponseMessage GetAudioById(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, audio.Get(id));
+        }
         #endregion
 
         #region Video Actions
+        [HttpGet()]
+        [Route("api/Video")]
+        public HttpResponseMessage GetAllVideo()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, video.GetAll());
+        }
+        [HttpGet()]
+        [Route("api/Video/{id}")]
+        public HttpResponseMessage GetVideoById(int id)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, video.Get(id));
+        }
         #endregion
     }
 }

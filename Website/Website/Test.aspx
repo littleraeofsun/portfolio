@@ -36,12 +36,16 @@
     <script type="text/javascript">
         var urlsToTest = [
             'http://localhost:57723/api/Projects',
+            'http://localhost:57723/api/Projects/1',
+            'http://localhost:57723/api/Projects/1/Media',
+            'http://localhost:57723/api/Projects/2/Images',
             'http://localhost:57723/api/Albums',
-            'http://localhost:57723/api/Media/All',
+            'http://localhost:57723/api/Albums/1/Media',
+            'http://localhost:57723/api/Media',
             'http://localhost:57723/api/Fail',
-            'http://localhost:57723/api/Media/All/1',
-            'http://localhost:57723/api/Media/Images',
-            'http://localhost:57723/api/Media/Images/ByProject/1',
+            'http://localhost:57723/api/Images',
+            'http://localhost:57723/api/Audio',
+            'http://localhost:57723/api/Video',
         ];
         $(document).ready(function () {
             for (var i = 0; i < urlsToTest.length; i++) {
