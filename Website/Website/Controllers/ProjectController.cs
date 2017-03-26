@@ -32,6 +32,13 @@ namespace Rae.Website.Controllers
         }
 
         [HttpGet()]
+        [Route("api/Projects/Category/{category}")]
+        public HttpResponseMessage GetProjectsInCategory(string category)
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, repository.GetByCategory(category));
+        }
+
+        [HttpGet()]
         [Route("api/Projects/{id}/Media")]
         public HttpResponseMessage GetProjectMedia(int id)
         {

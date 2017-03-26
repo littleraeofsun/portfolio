@@ -25,7 +25,10 @@ namespace Rae.Website.Models.Repositories
 
         public IQueryable<Project> GetByCategory(string Category)
         {
-            return dbSet.Where(p => p.Categories.ToLower().Split(',').Contains(Category.ToLower()));
+            string category = Category.ToLower();
+            return dbSet.Where(p => p.Categories.ToLower().Contains("," + category)
+                || p.Categories.ToLower().Contains(category + ",")
+                || p.Categories.ToLower() == category);
         }
 
         public IQueryable<Project> GetByDescription(string Term)
