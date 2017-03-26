@@ -39,6 +39,7 @@
             'http://localhost:57723/api/Projects/1',
             'http://localhost:57723/api/Projects/1/Media',
             'http://localhost:57723/api/Projects/2/Images',
+            'http://localhost:57723/api/Projects/Category/Website',
             'http://localhost:57723/api/Albums',
             'http://localhost:57723/api/Albums/1/Media',
             'http://localhost:57723/api/Media',
