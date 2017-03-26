@@ -154,6 +154,9 @@
     <Content Include="images\logo_large.png" />
     <Content Include="images\logo_medium.png" />
     <Content Include="images\logo_small.png" />
+    <Content Include="images\sunrise-large.jpg" />
+    <Content Include="images\sunrise-medium.jpg" />
+    <Content Include="images\sunrise-small.jpg" />
     <Content Include="Main.html" />
     <Content Include="Media\menu-music.mp3" />
     <Content Include="Project.html" />
