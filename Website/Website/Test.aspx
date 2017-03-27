@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Test Page</title>
-    <link href="styles/jquery.json-viewer.css" rel="stylesheet" />
+    <link href="Content/jquery.json-viewer.css" rel="stylesheet" />
     <style type="text/css">
         .result.success {
             background: #eeffdd;

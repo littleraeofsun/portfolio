@@ -167,7 +167,7 @@
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\jquery.json-viewer.js" />
     <Content Include="Scripts\responsive-img.min.js" />
-    <Content Include="styles\jquery.json-viewer.css" />
+    <Content Include="Content\jquery.json-viewer.css" />
     <Content Include="Test.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
