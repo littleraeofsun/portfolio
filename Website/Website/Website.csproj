@@ -152,9 +152,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="images\laptop-sun-large.jpg" />
     <Content Include="images\logo_large.png" />
     <Content Include="images\logo_medium.png" />
     <Content Include="images\logo_small.png" />
+    <Content Include="images\sunrays-large.jpg" />
     <Content Include="images\sunrise-large.jpg" />
     <Content Include="images\sunrise-medium.jpg" />
     <Content Include="images\sunrise-small.jpg" />

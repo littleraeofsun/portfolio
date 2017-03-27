@@ -16,9 +16,9 @@
 }
 #MainHeader {
     display: table-row;
-    background: url(../images/sunrise-large.jpg) no-repeat center bottom;
+    background: url(../images/laptop-sun-large.jpg) no-repeat center;
     background-size: cover;
-    height: 600px;
+    height: 100vh;
 }
 #MainHeaderText{
     display: table-cell;
