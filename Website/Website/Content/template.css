@@ -1,25 +1,70 @@
 ﻿body {
     font-family: 'Montserrat', sans-serif;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
 }
 #NavLogo {
     height: 50px;
     margin: 10px;
     position: relative;
-    top: 4px;
+    top: 2px;
 }
 #MainDisplay {
     display: table;
 }
 #MainHeader {
     display: table-row;
-    background: url(../images/laptop-sun-large.jpg) no-repeat center;
+    background: url(../images/laptop-sun-4196.jpg) no-repeat center;
     background-size: cover;
     height: 100vh;
 }
+@media (orientation:portrait)
+{    
+    #MainHeader{
+        background: url(../images/laptop-sun-p-2798.jpg) no-repeat center;
+    }
+}
+@media (max-height: 1500px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-1500.jpg) no-repeat center;
+    }
+}
+@media (max-height: 1000px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-1000.jpg) no-repeat center;
+    }
+}
+@media (max-height: 500px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-500.jpg) no-repeat center;
+    }
+}
+@media (max-width: 2098px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-2098.jpg) no-repeat center;
+    }
+}
+@media (max-width: 1500px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-1500.jpg) no-repeat center;
+    }
+}
+@media (max-width: 1049px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-1049.jpg) no-repeat center;
+    }
+}
+@media (max-width: 525px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-525.jpg) no-repeat center;
+    }
+}
+
 #MainHeaderText{
     display: table-cell;
     vertical-align: middle;
@@ -57,11 +102,11 @@
     border: 1px solid #000000;
 }
 #MainNav {
-    padding: 20px 30px;
+    /*padding: 20px 30px;*/
 }
 #MainNav.scrolled {
     background-color: white;
-    padding: 0;
+    /*padding: 0;*/
 }
 .no-gutters {
     margin-right: 0;
@@ -150,6 +195,31 @@ footer .footer-nav {
     font-size: 1.6em;
     margin-bottom: 14px;
 }
+.navbar-toggle {
+    padding: 19px 10px;
+}
 
+
+
+
+#page-loader {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99999;
+}
+#page-loader .page-loader-gif {
+    display: block;
+    width: 64px;
+    height: 64px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -32px 0 0 -32px;
+    background: url(../images/loading.gif) no-repeat;
+}
 
 /*BOOTSTRAP CHANGES*/

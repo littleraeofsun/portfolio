@@ -9,6 +9,7 @@
     <link href="favicon.png" rel="icon" />
 </head>
 <body>
+    <div id="page-loader"><span class="page-loader-gif"></span></div>
     <header class="top-menu">
         <nav id="MainNav" class="navbar navbar-fixed-top">
             <div class="container-fluid">
@@ -40,8 +41,9 @@
                 <div class="row" id="MainHeaderText">
                     <div class="floating-text">
                         <div class="background-lightbox"></div>
-                        <div class="title">Rae Melton</div>
-                        <div class="tagline">Developer/Designer</div>
+                        <div class="main-logo"><img src="images/logo_large.png" /></div>
+                        <div class="main-text">Portfolio of Rae Melton</div>
+                        <div class="main-tagline">Developer & Designer</div>
                     </div>
                 </div>
             </div>
@@ -121,24 +123,30 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="Scripts/responsive-img.min.js"></script>
     <script type="text/javascript">
-        $(document).ready(function() {
+        $(document).ready(function () {
+            //fadeout preloader
+            $(window).load(function () {
+                $('#page-loader').fadeOut(500);
+            });
+
+            //top nav animation/transition
             if ($(window).scrollTop() === 0) {
                 $('#MainNav').removeClass('scrolled');
-                $('#MainNav > div').addClass('container-full').removeClass('container');
+                //$('#MainNav > div').addClass('container-full').removeClass('container');
             }
             else {
                 $('#MainNav').addClass('scrolled'); 
-                $('#MainNav > div').addClass('container').removeClass('container-full');
+                //$('#MainNav > div').addClass('container').removeClass('container-full');
             }
 
             $(window).scroll(function () {
                 if ($(window).scrollTop() === 0) {
                     $('#MainNav').removeClass('scrolled');
-                    $('#MainNav > div').addClass('container-full').removeClass('container');
+                    //$('#MainNav > div').addClass('container-full').removeClass('container');
                 }
                 else {
                     $('#MainNav').addClass('scrolled');
-                    $('#MainNav > div').addClass('container').removeClass('container-full');
+                    //$('#MainNav > div').addClass('container').removeClass('container-full');
                 }
             });
         });
