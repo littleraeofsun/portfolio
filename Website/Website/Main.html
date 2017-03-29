@@ -5,6 +5,7 @@
 	<meta charset="utf-8" />
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="Content/bootstrap.text-align.css" rel="stylesheet" />
     <link href="Content/template.css" rel="stylesheet" />
     <link href="favicon.png" rel="icon" />
 </head>
@@ -39,57 +40,52 @@
         <div id="MainDisplay" class="container-full text-center">
             <div id="MainHeader">
                 <div class="row" id="MainHeaderText">
-                    <div class="floating-text">
-                        <div class="background-lightbox"></div>
-                        <div class="main-logo"><img src="images/logo_large.png" /></div>
-                        <div class="main-text">Portfolio of Rae Melton</div>
-                        <div class="main-tagline">Developer & Designer</div>
-                    </div>
+                    <img id="MainLogo" class="img-responsive" src="images/logo_main.png" />
                 </div>
             </div>
         </div>
         <div id="Body" class="container-full">
             <div class="row main-portfolio no-gutters">
-                <div class="col-lg-4 col-sm-6 col-xs-12 gallery-item">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
                         <div class="gallery-text">First</div>
-                        <div class="gallery-overlay" style="background: #39b6bc"></div>
+                        <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/801/601">
                         <div class="gallery-text">Second</div>
-                        <div class="gallery-overlay" style="background: #f7931e"></div>
+                        <!--<div class="gallery-overlay" style="background: #f7931e"></div>-->
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/802/602">
                         <div class="gallery-text">Third</div>
-                        <div class="gallery-overlay" style="background: #c7e247"></div>
+                        <!--<div class="gallery-overlay" style="background: #c7e247"></div>-->
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/803/603">
                         <div class="gallery-text">Fourth</div>
-                        <div class="gallery-overlay" style="background: #f95a72"></div>
+                        <!--<div class="gallery-overlay" style="background: #f95a72"></div>-->
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/804/604">
                         <div class="gallery-text">Fifth</div>
-                        <div class="gallery-overlay" style="background: #9454c6"></div>
+                        <!--<div class="gallery-overlay" style="background: #9454c6"></div>-->
                     </a>
                 </div>
-                <div class="col-lg-4 col-sm-6 col-xs-12">
+                <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://placehold.it/800x600">
+                        <img class="img-responsive" src="http://lorempixel.com/805/605">
                         <div class="gallery-text">Sixth</div>
-                        <div class="gallery-overlay" style="background: #f9cc3d"></div>
+                        <!--<div class="gallery-overlay" style="background: #f9cc3d"></div>-->
                     </a>
                 </div>
             </div>
@@ -97,23 +93,27 @@
     </main>
     <footer id="main-footer">
 
-        <div class="container">
+        <div class="container text-center">
 
             <div class="row">
 
-                <div class="col-xs-12 text-center">
+                <div class="col-xs-12">
                     <h1 class="footer-name">RAE MELTON</h1>
                     <div class="footer-tagline">Developer & Designer</div>
+                </div>
+
+                <div class="col-xs-12">
                     <ul class="footer-nav">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Albums</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a class="btn-link" href="#">Home</a></li>
+                        <li><a class="btn-link" href="#">Projects</a></li>
+                        <li><a class="btn-link" href="#">Albums</a></li>
+                        <li><a class="btn-link" href="#">Contact</a></li>
                     </ul>
-                    <p>©2017 <a href="#">littleraeofsun.com</a> | All Rights Reserved</p>
                 </div>
 
             </div>
+            <hr />
+            <p>©2017 <a href="#">littleraeofsun.com</a> | All Rights Reserved</p>
 
         </div>
 
