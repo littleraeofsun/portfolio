@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>Test Page</title>
-    <link href="Content/jquery.json-viewer.css" rel="stylesheet" />
+    <link href="Scripts/apps/json-viewer/style.css" rel="stylesheet" />
     <style type="text/css">
         .result.success {
             background: #eeffdd;
@@ -32,7 +32,7 @@
     </div>
     </form>
     <script src="Scripts/jquery-1.9.1.min.js"></script>
-    <script src="Scripts/jquery.json-viewer.js"></script>
+    <script src="Scripts/apps/json-viewer/script.js"></script>
     <script type="text/javascript">
         var urlsToTest = [
             'http://localhost:57723/api/Projects',
