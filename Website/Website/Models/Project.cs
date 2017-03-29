@@ -15,11 +15,16 @@ namespace Rae.Website.Models
 
         [StringLength(100)]
         public string Customer { get; set; }
+        
+        public int Year { get; set; }
+
+        [StringLength(1000)]
+        public string Tools { get; set; }
 
         [StringLength(255)]
         public string Url { get; set; }
 
-        [StringLength(2000)]
+        [StringLength(5000)]
         public string Description { get; set; }
 
         [StringLength(200)]

@@ -35,5 +35,15 @@ namespace Rae.Website.Models.Repositories
         {
             return dbSet.Where(p => p.Description.ToLower().Contains(Term.ToLower()));
         }
+
+        public IQueryable<Project> GetByTool(string Tool)
+        {
+            return dbSet.Where(p => p.Tools.ToLower().Contains(Tool.ToLower()));
+        }
+
+        public IQueryable<Project> GetByYear(int Year)
+        {
+            return dbSet.Where(p => p.Year == Year);
+        }
     }
 }
