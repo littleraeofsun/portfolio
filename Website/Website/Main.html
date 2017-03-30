@@ -2,11 +2,12 @@
 <html>
 <head>
     <title>littleraeofsun | Portfolio</title>
-	<meta charset="utf-8" />
+	<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="Content/bootstrap.text-align.css" rel="stylesheet" />
-    <link href="Content/template.css" rel="stylesheet" />
+    <link href="Content/main.css" rel="stylesheet" />
     <link href="favicon.png" rel="icon" />
 </head>
 <body>
@@ -21,12 +22,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#"><img id="NavLogo" src="images/logo_small.png" /></a>
+                    <a href="#"><img id="NavLogo" class="img-responsive" src="images/logo_small.png" /></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">Albums</a></li>
+                        <!--<li><a href="#">Projects</a></li>-->
+                        <!--<li><a href="#">Albums</a></li>-->
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <!--<form class="navbar-form navbar-right">
@@ -41,6 +42,10 @@
             <div id="MainHeader">
                 <div class="row" id="MainHeaderText">
                     <img id="MainLogo" class="img-responsive" src="images/logo_main.png" />
+                    <div class="scroll-button" scroll-target="#Body">
+                        Scroll Down 
+                        <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,35 +60,40 @@
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://lorempixel.com/801/601">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
+                        <!--<img class="img-responsive" src="http://lorempixel.com/801/601">-->
                         <div class="gallery-text">Second</div>
                         <!--<div class="gallery-overlay" style="background: #f7931e"></div>-->
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://lorempixel.com/802/602">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
+                        <!--<img class="img-responsive" src="http://lorempixel.com/802/602">-->
                         <div class="gallery-text">Third</div>
                         <!--<div class="gallery-overlay" style="background: #c7e247"></div>-->
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://lorempixel.com/803/603">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
+                        <!--<img class="img-responsive" src="http://lorempixel.com/803/603">-->
                         <div class="gallery-text">Fourth</div>
                         <!--<div class="gallery-overlay" style="background: #f95a72"></div>-->
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://lorempixel.com/804/604">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
+                        <!--<img class="img-responsive" src="http://lorempixel.com/804/604">-->
                         <div class="gallery-text">Fifth</div>
                         <!--<div class="gallery-overlay" style="background: #9454c6"></div>-->
                     </a>
                 </div>
                 <div class="col-md-4 col-sm-6 col-xs-12 gallery-item">
                     <a href="#">
-                        <img class="img-responsive" src="http://lorempixel.com/805/605">
+                        <img class="img-responsive" src="http://lorempixel.com/800/600">
+                        <!--<img class="img-responsive" src="http://lorempixel.com/805/605">-->
                         <div class="gallery-text">Sixth</div>
                         <!--<div class="gallery-overlay" style="background: #f9cc3d"></div>-->
                     </a>
@@ -104,10 +114,10 @@
 
                 <div class="col-xs-12">
                     <ul class="footer-nav">
-                        <li><a class="btn-link" href="#">Home</a></li>
-                        <li><a class="btn-link" href="#">Projects</a></li>
-                        <li><a class="btn-link" href="#">Albums</a></li>
-                        <li><a class="btn-link" href="#">Contact</a></li>
+                        <li><a href="#">Home</a></li>
+                        <!--<li><a href="#">Projects</a></li>-->
+                        <!--<li><a href="#">Albums</a></li>-->
+                        <li><a href="#">Contact</a></li>
                     </ul>
                 </div>
 
@@ -132,21 +142,27 @@
             //top nav animation/transition
             if ($(window).scrollTop() === 0) {
                 $('#MainNav').removeClass('scrolled');
-                //$('#MainNav > div').addClass('container-full').removeClass('container');
             }
             else {
                 $('#MainNav').addClass('scrolled'); 
-                //$('#MainNav > div').addClass('container').removeClass('container-full');
             }
 
             $(window).scroll(function () {
                 if ($(window).scrollTop() === 0) {
                     $('#MainNav').removeClass('scrolled');
-                    //$('#MainNav > div').addClass('container-full').removeClass('container');
                 }
                 else {
                     $('#MainNav').addClass('scrolled');
-                    //$('#MainNav > div').addClass('container').removeClass('container-full');
+                }
+            });
+
+            //scroll buttons
+            $('.scroll-button').click(function () {
+                var tar = $(this).attr('scroll-target');
+                if (tar != "") {
+                    $('html, body').animate({
+                        scrollTop: $(tar).offset().top
+                    }, 1000);
                 }
             });
         });

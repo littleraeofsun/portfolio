@@ -9,6 +9,7 @@
 }
 #MainLogo{
     display: inline-block;
+    margin-bottom: 3em;
 }
 #MainDisplay {
     display: table;
@@ -19,58 +20,52 @@
     background-size: cover;
     height: 100vh;
 }
-@media (orientation:portrait)
+@media screen and (orientation:portrait)
 {    
     #MainHeader{
         background: url(../images/laptop-sun-p-2798.jpg) no-repeat center;
     }
 }
-@media (max-height: 1200px) and (orientation:portrait)
+@media screen and (max-height: 1200px) and (orientation:portrait)
 {
     #MainHeader{
         background: url(../images/laptop-sun-p-1500.jpg) no-repeat center;
     }
 }
-@media (max-height: 800px) and (orientation:portrait)
+@media screen and (max-height: 800px) and (orientation:portrait)
 {
     #MainHeader{
         background: url(../images/laptop-sun-p-1000.jpg) no-repeat center;
     }
 }
-@media (max-height: 480px) and (orientation:portrait)
+@media screen and (max-height: 480px) and (orientation:portrait)
 {
     #MainHeader{
         background: url(../images/laptop-sun-p-500.jpg) no-repeat center;
     }
 }
-@media (max-width: 1900px) and (orientation:landscape)
+@media screen and (max-width: 1900px) and (orientation:landscape)
 {
     #MainHeader{
         background: url(../images/laptop-sun-2098.jpg) no-repeat center;
     }
 }
-@media (max-width: 1200px) and (orientation:landscape)
+@media screen and (max-width: 1200px) and (orientation:landscape)
 {
     #MainHeader{
         background: url(../images/laptop-sun-1500.jpg) no-repeat center;
     }
 }
-@media (max-width: 800px) and (orientation:landscape)
+@media screen and (max-width: 800px) and (orientation:landscape)
 {
     #MainHeader{
         background: url(../images/laptop-sun-1049.jpg) no-repeat center;
     }
 }
-@media (max-width: 480px) and (orientation:landscape)
+@media screen and (max-width: 480px) and (orientation:landscape)
 {
     #MainHeader{
         background: url(../images/laptop-sun-525.jpg) no-repeat center;
-    }
-}
-@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
-    /* retina/high dpi displays */
-    #MainHeader {
-        background: url(../images/laptop-sun-p-2798.jpg) no-repeat center;
     }
 }
 
@@ -208,6 +203,7 @@ footer .footer-nav li {
     display: inline-block;
     padding: 0 20px;
     position: relative;
+    width: 100px;
 }
 footer .footer-nav {
     padding: 0;
@@ -243,5 +239,24 @@ footer .footer-nav {
     margin: -164px 0 0 -400px;
     background: url(../images/loading.gif) no-repeat;
 }
+#MainHeaderText .scroll-button {
+    width: 200px;
+    margin: auto;
+}
+.scroll-button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(0,0,0,0.65);
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.scroll-button:hover{
+    opacity: 1;
+}
+.scroll-button .glyphicon {font-size:2em; display:block;}
 
 /*BOOTSTRAP CHANGES*/
