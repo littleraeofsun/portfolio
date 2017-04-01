@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <link href="Content/bootstrap.text-align.css" rel="stylesheet" />
+    <link href="Scripts/apps/lightbox/css/lightbox.css" rel="stylesheet" />
     <link href="Content/project.css" rel="stylesheet" />
     <link href="favicon.png" rel="icon" />
 </head>
@@ -27,8 +27,8 @@
                 </div>
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav navbar-right">
-                        <!--<li><a href="#">Projects</a></li>-->
-                        <!--<li><a href="#">Albums</a></li>-->
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Albums</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                     <!--<form class="navbar-form navbar-right">
@@ -51,18 +51,18 @@
                     <div class="project-info container-fluid">
                         <div class="row">
                             <div class="col-xs-6">
-                                <div class="data-item">
+                                <div class="data-item project-date">
                                     <span class="data-header">Date:</span> July 2013                                    
                                 </div>
-                                <div class="data-item">
+                                <div class="data-item project-client">
                                     <span class="data-header">Client:</span> City of Tulsa
                                 </div>
-                                <div class="data-item">
+                                <div class="data-item project-type">
                                     <span class="data-header">Type:</span> <a href="#">Website</a>
                                 </div>
                             </div>
-                            <div class="col-xs-6 text-right">
-                                <a href="#" class="btn btn-primary btn-lg">Large button</a>
+                            <div class="col-xs-6 text-right project-view-live">
+                                <a href="#" class="btn btn-primary">View Live</a>
                             </div>
                         </div>
                         <div class="row project-text">
@@ -78,51 +78,50 @@
                                 <p>Since the launch, a Fire Department-specific portion of the form has been added so that the Fire Chief can better assess hazards for firefighters and staff. A similar functionality is planned for the Police Department as well. I will also be implementing a registration process for department heads to request receiving a copy of forms submitted for employees in their department.</p>
                             </div>
                         </div>
+                        <div class="row project-tools">
+                            <div class="col-xs-12">
+                                <span class="label label-default">Visual Studio</span>
+                                <span class="label label-default">ASP.NET</span>
+                                <span class="label label-default">C#</span>
+                                <span class="label label-default">KnockoutJS</span>
+                                <span class="label label-default">MSSQL</span>
+                                <span class="label label-default">SketchFlow</span>
+                                <span class="label label-default">Photoshop</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="col-sm-6 col-sm-pull-6 col-xs-12 project-gallery">
                     <div class="container-fluid">
                         <div class="row">
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the first gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">First</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the second gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">Second</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the third gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">Third</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the fourth gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">Fourth</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the fifth gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">Fifth</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                             <div class="col-md-6 col-sm-12 gallery-item">
-                                <a href="#">
+                                <a href="http://lorempixel.com/1600/1200" data-lightbox="album-gallery" data-title="This is a description of the sixth gallery image.">
                                     <img class="img-responsive" src="http://lorempixel.com/800/600">
-                                    <div class="gallery-text">Sixth</div>
-                                    <!--<div class="gallery-overlay" style="background: #39b6bc"></div>-->
                                 </a>
                             </div>
                         </div>
@@ -131,12 +130,39 @@
             </div>
         </div>
     </main>
+    <footer id="main-footer">
+
+        <div class="container text-center">
+
+            <div class="row">
+
+                <div class="col-xs-12">
+                    <h1 class="footer-name">RAE MELTON</h1>
+                    <div class="footer-tagline">Developer & Designer</div>
+                </div>
+
+                <div class="col-xs-12">
+                    <ul class="footer-nav">
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">Albums</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+            </div>
+            <hr />
+            <p>©2017 <a href="#">littleraeofsun.com</a> | All Rights Reserved</p>
+
+        </div>
+
+    </footer>
 
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="Scripts/responsive-img.min.js"></script>
+    <script src="Scripts/apps/lightbox/js/lightbox.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             //fadeout preloader

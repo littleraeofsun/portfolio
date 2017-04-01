@@ -161,25 +161,6 @@ a:focus, a:hover {
         transform: scaleX(1);
     }
 }
-
-
-.main-portfolio {
-}
-.gallery-overlay {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    left: 0;
-    opacity: 0.6;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
-}
-.gallery-overlay:hover {
-    opacity: 0;
-}
 .gallery-text {
     position: absolute;
     top: 60%;
@@ -196,8 +177,6 @@ a:focus, a:hover {
 }
 .gallery-item:hover .gallery-text{
     top: 55%;
-}
-footer .footer-nav {
 }
 footer .footer-nav li {
     display: inline-block;
