@@ -1,5 +1,10 @@
 ﻿body {
     font-family: 'Montserrat', sans-serif;
+    background: #191f2f;
+    color: white;
+}
+main {
+    margin-top: 71px;
 }
 .container-full {
   margin: 0 auto;
@@ -29,4 +34,134 @@
     left: 50%;
     margin: -164px 0 0 -400px;
     background: url(../images/loading.gif) no-repeat;
+}
+.navbar-nav>li>a {
+    line-height: 44px;
+}
+#MainNav, #MainNav *{
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+#MainNav .navbar-toggle .icon-bar {
+    border: 1px solid #000000;
+}
+#MainNav {
+    /*padding: 20px 30px;*/
+}
+@media (max-width:768px){
+    #MainNav{
+        background-color: white;
+    }
+}
+#MainNav.scrolled {
+    background-color: white;
+    /*padding: 0;*/
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters .col, .no-gutters [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
+a {
+    color: #f7931e;
+}
+a:focus, a:hover {
+    color: #f15a24;
+}
+#navbar a {    
+    padding: 10px 15px;
+}
+#navbar a:focus, #navbar a:hover {
+    background: none;
+}
+@media (min-width:768px) {
+    /*From: http://tobiasahlin.com/blog/css-trick-animating-link-underlines/*/
+    #navbar a:before /*, footer .footer-nav a:before*/ {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f15a24;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    #navbar a:hover:before /*, footer .footer-nav a:hover:before*/ {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+.page-title {
+    background: #18293b;
+    margin: 0;
+}
+.page-title h1 {    
+    font-weight: 600;
+}
+.page-title hr {
+    border: 0;
+    border-bottom: 4px solid #fbdd3b;
+    width: 200px;
+}
+.page-title > div {
+    margin: 15px 0;
+}
+
+.project-gallery {
+    overflow: hidden;
+}
+.gallery-overlay {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0.6;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.gallery-overlay:hover {
+    opacity: 0;
+}
+.gallery-text {
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 3em;
+    font-weight: 700;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.gallery-item:hover .gallery-text{
+    top: 55%;
+}
+
+
+/* from: http://stackoverflow.com/questions/24990775/is-there-a-way-in-bootstrap-to-split-a-column-on-small-screens */
+@media (min-width: 992px) {
+  .col-md-pull-right {
+      float: right;
+  }
+}
+.lower {
+  clear: left;
 }
