@@ -135,6 +135,9 @@
   <ItemGroup>
     <Content Include="About.html" />
     <Content Include="Album.html" />
+    <Content Include="Albums.html" />
+    <Content Include="Content\album.css" />
+    <Content Include="Content\albums.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -154,6 +157,11 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="images\code.svg" />
+    <Content Include="images\fingerprint.svg" />
+    <Content Include="images\injury-form-large.jpg" />
+    <Content Include="images\injury-form-medium.jpg" />
+    <Content Include="images\injury-form-small.jpg" />
     <Content Include="images\laptop-sun-1049.jpg" />
     <Content Include="images\laptop-sun-1500.jpg" />
     <Content Include="images\laptop-sun-2098.jpg" />
@@ -169,9 +177,12 @@
     <Content Include="images\logo_main.png" />
     <Content Include="images\logo_medium.png" />
     <Content Include="images\logo_small.png" />
+    <Content Include="images\pen.svg" />
+    <Content Include="images\rocket.svg" />
     <Content Include="Main.html" />
     <Content Include="Media\menu-music.mp3" />
     <Content Include="Project.html" />
+    <Content Include="Projects.html" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
