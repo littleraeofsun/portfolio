@@ -1,5 +1,6 @@
 ﻿body {
     font-family: 'Montserrat', sans-serif;
+    color: black;
 }
 #NavLogo {
     height: 50px;
@@ -75,20 +76,6 @@
     text-transform: uppercase;
     padding: 0 30px;
     color: #00738c;
-}
-#MainHeaderText .floating-text {    
-    background: rgba(255,255,255,0.65);
-    margin: auto;
-    display: inline-block;
-    padding: 40px 80px;
-}
-#MainHeaderText .title {
-    font-size: 6em;
-    font-weight: 700;
-}
-#MainHeaderText .tagline {
-    font-size: 3.4em;
-    font-weight: 600;
 }
 .container-full {
   margin: 0 auto;
@@ -170,14 +157,17 @@ a:focus, a:hover {
     text-transform: uppercase;
     font-size: 3em;
     font-weight: 700;
-    -webkit-transition: all 0.3s ease-out;
-    -moz-transition: all 0.3s ease-out;
-    -o-transition: all 0.3s ease-out;
-    transition: all 0.3s ease-out;
+    text-shadow: 0 1px 5px #333;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
 }
 .gallery-item:hover .gallery-text{
     top: 55%;
 }
+
+
 footer .footer-nav li {
     display: inline-block;
     padding: 0 20px;
@@ -195,9 +185,31 @@ footer .footer-nav {
 .navbar-toggle {
     padding: 19px 10px;
 }
-
-
-
+.skill {
+    padding: 3em;
+}
+.skill h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.skill-branding {
+    background: #3a79ad;
+}
+.skill-design {
+    background: #55a4aa;
+}
+.skill-development {
+    background: #84913c;
+}
+.skill-rocket {
+    background: #e5b560;
+}
+.skill-icon {
+    background: white;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 100px;
+}
 
 #page-loader {
     position: fixed;
