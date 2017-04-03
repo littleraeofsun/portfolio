@@ -25,6 +25,13 @@ namespace Rae.Website.Controllers
         }
 
         [HttpGet()]
+        [Route("api/Albums/Featured")]
+        public HttpResponseMessage GetAllFeaturedAlbums()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, repository.GetFeatured());
+        }
+
+        [HttpGet()]
         [Route("api/Albums/{id}")]
         public HttpResponseMessage GetAlbumById(int id)
         {

@@ -1,0 +1,417 @@
+﻿/* Main Template Styles (TODO: set these via bootstrap LESS) */
+body {
+    font-family: 'Montserrat', sans-serif;
+    color: black;
+}
+a {
+    color: #f7931e;
+}
+a:focus, a:hover {
+    color: #f15a24;
+}
+
+/* Structural Styles */
+.container-full {
+  margin: 0 auto;
+  width: 100%;
+}
+.no-gutters {
+    margin-right: 0;
+    margin-left: 0;
+}
+.no-gutters .col, .no-gutters [class*="col-"]{
+    padding-right: 0;
+    padding-left: 0;
+}
+
+/* Loader Styles */
+#page-loader {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99999;
+}
+#page-loader .page-loader-gif {
+    display: block;
+    width: 800px;
+    height: 328px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -164px 0 0 -400px;
+    background: url(../images/loading.gif) no-repeat;
+}
+
+/* Top Nav Styles */
+.navbar-nav>li>a {
+    line-height: 44px;
+}
+.navbar-toggle {
+    padding: 19px 10px;
+}
+#NavLogo {
+    height: 50px;
+    margin: 10px;
+    position: relative;
+    top: 2px;
+}
+#MainNav, #MainNav *{
+    -webkit-transition: all 0.5s ease-out;
+    -moz-transition: all 0.5s ease-out;
+    -o-transition: all 0.5s ease-out;
+    transition: all 0.5s ease-out;
+}
+#MainNav .navbar-toggle .icon-bar {
+    border: 1px solid #000000;
+}
+@media (max-width:768px){
+    #MainNav{
+        background-color: white;
+    }
+    main {
+        margin-top: 71px;
+    }
+}
+#MainNav.scrolled {
+    background-color: white;
+}
+#navbar a {    
+    padding: 10px 15px;
+}
+#navbar a:focus, #navbar a:hover {
+    background: none;
+}
+@media (min-width:768px) {
+    /*From: http://tobiasahlin.com/blog/css-trick-animating-link-underlines/*/
+    #navbar a:before /*, footer .footer-nav a:before*/ {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #f15a24;
+        visibility: hidden;
+        -webkit-transform: scaleX(0);
+        transform: scaleX(0);
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        transition: all 0.3s ease-in-out 0s;
+    }
+
+    #navbar a:hover:before /*, footer .footer-nav a:hover:before*/ {
+        visibility: visible;
+        -webkit-transform: scaleX(1);
+        transform: scaleX(1);
+    }
+}
+
+/* Header Styles */
+#MainLogo{
+    display: inline-block;
+    margin-bottom: 3em;
+}
+#MainDisplay {
+    display: table;
+}
+#MainHeader {
+    display: table-row;
+    background: url(../images/laptop-sun-4196.jpg) no-repeat center;
+    background-size: cover;
+    height: 100vh;
+}
+@media screen and (orientation:portrait)
+{    
+    #MainHeader{
+        background: url(../images/laptop-sun-p-2798.jpg) no-repeat center;
+    }
+}
+@media screen and (max-height: 1200px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-1500.jpg) no-repeat center;
+    }
+}
+@media screen and (max-height: 800px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-1000.jpg) no-repeat center;
+    }
+}
+@media screen and (max-height: 480px) and (orientation:portrait)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-p-500.jpg) no-repeat center;
+    }
+}
+@media screen and (max-width: 1900px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-2098.jpg) no-repeat center;
+    }
+}
+@media screen and (max-width: 1200px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-1500.jpg) no-repeat center;
+    }
+}
+@media screen and (max-width: 800px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-1049.jpg) no-repeat center;
+    }
+}
+@media screen and (max-width: 480px) and (orientation:landscape)
+{
+    #MainHeader{
+        background: url(../images/laptop-sun-525.jpg) no-repeat center;
+    }
+}
+
+#MainHeaderText{
+    display: table-cell;
+    vertical-align: middle;
+    text-transform: uppercase;
+    padding: 0 30px;
+    color: #00738c;
+}
+
+#MainHeaderText .scroll-button {
+    width: 200px;
+    margin: auto;
+}
+
+/* Content Styles */
+.scroll-button {
+    cursor: pointer;
+    color: #fff;
+    font-weight: 700;
+    text-shadow: 0 0 1px rgba(0,0,0,0.65);
+    opacity: 0.7;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.scroll-button:hover{
+    opacity: 1;
+}
+.scroll-button .glyphicon {font-size:2em; display:block;}
+
+.portfolio-text {
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    width: 100%;
+    color: white;
+    text-transform: uppercase;
+    font-size: 2.5em;
+    font-weight: 700;
+    text-shadow: 0 1px 5px #333;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    -o-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+}
+.portfolio-item:hover .portfolio-text{
+    top: 55%;
+}
+.album-gallery .portfolio-text, .project-gallery .portfolio-text {
+    font-size: 2em;
+}
+.main-skills {
+    display: table;
+}
+.skill-section {
+    display: table-row;
+}
+.skill {
+    padding: 3em;    
+    display: table-cell;
+    float: none;
+    vertical-align: top;
+}
+@media screen and (max-width: 991px) {
+    .main-skills, .skill-section {
+        display: block;
+    }
+    .skill {
+        display:inline-block;
+        float: left;
+    }
+}
+.skill h3 {
+    text-transform: uppercase;
+    font-weight: 600;
+}
+.skill p {
+    margin: 0 3em;
+    line-height: 2em;
+}
+@media screen and (max-width: 1199px) and (min-width: 992px) {
+    .skill p {
+        margin: 0 1em;
+    }
+}
+.skill-branding {
+    background: #3a79ad;
+}
+.skill-branding:hover .skill-icon {
+    background-image: url(../images/branding.gif);
+    background-position: bottom center;
+}
+.skill-design {
+    background: #55a4aa;
+}
+.skill-design:hover .skill-icon {
+    background-image: url(../images/design.gif);
+    background-position: center;
+}
+.skill-development {
+    background: #84913c;
+}
+.skill-development:hover .skill-icon {
+    background-image: url(../images/code.gif);
+    background-position: center;
+}
+.skill-rocket {
+    background: #e5b560;
+}
+.skill-rocket:hover .skill-icon {
+    background-image: url(../images/rocket.gif);
+}
+.skill-icon {
+    background: white;
+    display: inline-block;
+    padding: 30px;
+    border-radius: 100px;
+}
+.page-title {    
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    background: black;
+}
+.page-title h1 {    
+    font-weight: 600;
+    text-shadow: 0 1px 5px #333;
+    margin: 4em 0;
+    color: white;
+}
+.title-background{
+    position: absolute;
+    height: 120%;
+    width: 120%;
+    top: -15px;
+    left: -15px;
+    background: no-repeat center;
+    background-size: cover;
+    -webkit-filter: blur(5px);
+    -moz-filter: blur(5px);
+    -o-filter: blur(5px);
+    -ms-filter: blur(5px);
+    filter: blur(5px);
+    opacity: 0.7;
+}
+.project-view-live .btn {
+    background: #f79520;
+    border: 0;
+    font-weight: 600;
+}
+
+.project-view-live .btn:hover {
+    background: #e65b0a;
+}
+.project-info {
+    margin: 30px;
+}
+.data-header {
+    color: #f79520;
+    font-weight: 600;    
+    margin-right: 4px;
+    font-size: 1.2em;
+}
+.project-text {
+    margin-top: 2em;
+}
+.project-tools {
+    margin-top: 2em;
+}
+.project-tools .label {
+    font-weight: 600;
+    background: #085581;
+    margin-right: 0.5em;
+    display: inline-block;
+}
+.gallery-item {
+    height: 15vw;
+    overflow: hidden;
+}
+@media screen and (max-width: 1199px)
+{
+    .gallery-item {
+        height: 20vw;
+    }
+}
+@media screen and (max-width: 991px)
+{
+    .gallery-item {
+        height: 32vw;
+    }
+}
+@media screen and (max-width: 767px)
+{
+    .gallery-item {
+        height: auto;
+        max-height: 100vw;
+    }
+}
+.gallery-item img {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+.gallery-item a:after {
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+    content: "\e003";
+    font-family: 'Glyphicons Halflings';
+    position: absolute;
+    left: 60%;
+    font-size: 6em;
+    top: 55%;
+    margin-top: -1em;
+    margin-left: -1em;
+    color: white;
+    opacity: 0;
+    transform: scale(1.1);
+}
+.gallery-item:hover a:after {
+    opacity: 0.6;
+    transform: scale(1);
+}
+
+/* Footer Styles */
+footer .footer-nav li {
+    display: inline-block;
+    padding: 0 20px;
+    position: relative;
+    width: 100px;
+}
+footer .footer-nav {
+    padding: 0;
+    color: #00738c;
+}
+.footer-tagline {
+    font-size: 1.6em;
+    margin-bottom: 14px;
+}

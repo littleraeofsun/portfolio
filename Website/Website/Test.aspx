@@ -34,48 +34,54 @@
     <script src="Scripts/jquery-1.9.1.min.js"></script>
     <script src="Scripts/apps/json-viewer/script.js"></script>
     <script type="text/javascript">
-        var urlsToTest = [
-            'http://localhost:57723/api/Projects',
-            'http://localhost:57723/api/Projects/1',
-            'http://localhost:57723/api/Projects/1/Media',
-            'http://localhost:57723/api/Projects/2/Images',
-            'http://localhost:57723/api/Projects/Category/Website',
-            'http://localhost:57723/api/Albums',
-            'http://localhost:57723/api/Albums/1/Media',
-            'http://localhost:57723/api/Media',
-            'http://localhost:57723/api/Fail',
-            'http://localhost:57723/api/Images',
-            'http://localhost:57723/api/Audio',
-            'http://localhost:57723/api/Video',
-        ];
+        //var urlsToTest = [
+        //    'http://localhost:57723/api/Projects',
+        //    'http://localhost:57723/api/Projects/1',
+        //    'http://localhost:57723/api/Projects/1/Media',
+        //    'http://localhost:57723/api/Projects/2/Images',
+        //    'http://localhost:57723/api/Projects/Category/Website',
+        //    'http://localhost:57723/api/Albums',
+        //    'http://localhost:57723/api/Albums/1/Media',
+        //    'http://localhost:57723/api/Media',
+        //    'http://localhost:57723/api/Fail',
+        //    'http://localhost:57723/api/Images',
+        //    'http://localhost:57723/api/Audio',
+        //    'http://localhost:57723/api/Video',
+        //];
+        //$(document).ready(function () {
+        //    for (var i = 0; i < urlsToTest.length; i++) {
+        //        TestUrl(urlsToTest[i]);
+        //    }
+        //});
+        //function TestUrl(url) {
+        //    $.ajax({
+        //        url: url,
+        //        type: 'GET',
+        //        dataType: 'json',
+        //        success: function (data) {
+        //            var result = $('<div class="result success"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
+        //            result.children('.result-data').jsonViewer(data);
+        //            $('#TestResults').append(result);
+        //            result.children('.result-title').click(function () {
+        //                $(this).next().toggle();
+        //            });
+        //        },
+        //        error: function (x, y, z) {
+        //            var result = $('<div class="result error"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
+        //            result.children('.result-data').jsonViewer({ x: x, y: y, z: z });
+        //            $('#TestResults').append(result);
+        //            result.children('.result-title').click(function () {
+        //                $(this).next().toggle();
+        //            });
+        //        }
+        //    });
+        //}
         $(document).ready(function () {
-            for (var i = 0; i < urlsToTest.length; i++) {
-                TestUrl(urlsToTest[i]);
-            }
-        });
-        function TestUrl(url) {
-            $.ajax({
-                url: url,
-                type: 'GET',
-                dataType: 'json',
-                success: function (data) {
-                    var result = $('<div class="result success"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
-                    result.children('.result-data').jsonViewer(data);
-                    $('#TestResults').append(result);
-                    result.children('.result-title').click(function () {
-                        $(this).next().toggle();
-                    });
-                },
-                error: function (x, y, z) {
-                    var result = $('<div class="result error"><div class="result-title">' + this.url + '</div><pre class="result-data" style="display:none;"></pre></div>');
-                    result.children('.result-data').jsonViewer({ x: x, y: y, z: z });
-                    $('#TestResults').append(result);
-                    result.children('.result-title').click(function () {
-                        $(this).next().toggle();
-                    });
-                }
+            var url = ""; //https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=68f9a3498ff770330ef51429836ba68a&photoset_id=72157678772804144&user_id=82935922%40N05&format=json&nojsoncallback=1&api_sig=516952fb52b8c5bf3cad3aadd0165cf6";
+            $.getJSON(url, null, function (data) {
+                var test = "";
             });
-        }
+        });
     </script>
 </body>
 </html>

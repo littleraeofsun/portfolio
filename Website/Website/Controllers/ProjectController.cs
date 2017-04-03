@@ -25,6 +25,13 @@ namespace Rae.Website.Controllers
         }
 
         [HttpGet()]
+        [Route("api/Projects/Featured")]
+        public HttpResponseMessage GetAllFeaturedProjects()
+        {
+            return Request.CreateResponse(HttpStatusCode.OK, repository.GetFeatured());
+        }
+
+        [HttpGet()]
         [Route("api/Projects/{id}")]
         public HttpResponseMessage GetProjectById(int id)
         {

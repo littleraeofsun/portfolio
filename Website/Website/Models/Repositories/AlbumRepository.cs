@@ -7,6 +7,11 @@ namespace Rae.Website.Models.Repositories
 {
     public class AlbumRepository : Repository<Album>
     {
+        public IQueryable<Album> GetFeatured()
+        {
+            return dbSet.Where(p => p.IsFeatured);
+        }
+
         public IQueryable<Album> GetByName(string Name, bool Exact = true)
         {
             if(Exact)

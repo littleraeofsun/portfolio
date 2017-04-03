@@ -1,0 +1,51 @@
+﻿<div class="container-full">
+    <div class="row page-title text-center">
+        <div class="title-background" style="background-image: url({{project.FeaturedImageUrlLarge}})"></div>
+        <div class="col-xs-12 title-text">
+            <h1>{{project.Title}}</h1>
+        </div>
+    </div>
+    <div class="row no-gutters">
+        <div class="col-sm-6 col-sm-push-6 col-xs-12">
+            <div class="project-info container-fluid">
+                <div class="row">
+                    <div class="col-xs-6">
+                        <div class="data-item project-date">
+                            <span class="data-header">Date:</span> {{project.Year}}
+                        </div>
+                        <div class="data-item project-client">
+                            <span class="data-header">Client:</span> {{project.Customer}}
+                        </div>
+                        <div class="data-item project-type">
+                            <span class="data-header">Type:</span> {{project.Categories}}
+                        </div>
+                    </div>
+                    <div class="col-xs-6 text-right project-view-live" ng-show="project.Url">
+                        <a href="{{project.Url}}" class="btn btn-primary">View Live</a>
+                    </div>
+                </div>
+                <div class="row project-text">
+                    <div class="col-xs-12">
+                        <p ng-repeat="paragraph in project.DescriptionParagraphs">{{paragraph}}</p>
+                    </div>
+                </div>
+                <div class="row project-tools">
+                    <div class="col-xs-12">
+                        <span class="label label-default" ng-repeat="tool in project.Tools">{{tool}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6 col-sm-pull-6 col-xs-12 project-gallery">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6 col-sm-12 gallery-item" ng-repeat="media in project.Media">
+                        <a href="{{media.UrlLarge}}" data-lightbox="album-gallery" data-title="{{media.Description}}">
+                            <img class="img-responsive" src="{{media.UrlMedium}}" />
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

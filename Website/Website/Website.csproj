@@ -144,8 +144,11 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\bootstrap.text-align.css" />
+    <Content Include="Content\home.css" />
     <Content Include="Content\main.css" />
     <Content Include="Content\project.css" />
+    <Content Include="Content\styles.css" />
+    <Content Include="Default2.html" />
     <Content Include="favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -157,19 +160,29 @@
     <Content Include="Content\bootstrap.css.map" />
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Scripts\angular-mocks.js" />
-    <Content Include="Scripts\angular-route.js" />
-    <Content Include="Scripts\angular-route.min.js" />
-    <Content Include="Scripts\angular.js" />
-    <Content Include="Scripts\angular.min.js" />
-    <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="Scripts\angular-route.min.js.map" />
+    <Content Include="images\branding.gif" />
+    <Content Include="images\code.gif" />
+    <Content Include="images\design.gif" />
+    <Content Include="images\rocket.gif" />
+    <Content Include="partials\album.html" />
+    <Content Include="partials\albums.html" />
+    <Content Include="partials\home.html" />
+    <Content Include="partials\project.html" />
+    <Content Include="partials\projects.html" />
+    <Content Include="Scripts\apps\angular\angular-mocks.js" />
+    <Content Include="Scripts\apps\angular\angular-route.js" />
+    <Content Include="Scripts\apps\angular\angular-route.min.js" />
+    <Content Include="Scripts\apps\angular\angular.js" />
+    <Content Include="Scripts\apps\angular\angular.min.js" />
+    <Content Include="Scripts\apps\angular\angular.min.js.map" />
+    <Content Include="Scripts\apps\angular\angular-route.min.js.map" />
+    <None Include="Properties\PublishProfiles\Live.pubxml" />
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="images\code.svg" />
     <Content Include="images\fingerprint.svg" />
-    <Content Include="images\injury-form-large.jpg" />
-    <Content Include="images\injury-form-medium.jpg" />
-    <Content Include="images\injury-form-small.jpg" />
+    <Content Include="images\featured\injury-form-large.jpg" />
+    <Content Include="images\featured\injury-form-medium.jpg" />
+    <Content Include="images\featured\injury-form-small.jpg" />
     <Content Include="images\laptop-sun-1049.jpg" />
     <Content Include="images\laptop-sun-1500.jpg" />
     <Content Include="images\laptop-sun-2098.jpg" />
@@ -202,9 +215,13 @@
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
     <Content Include="Scripts\apps\json-viewer\script.js" />
+    <Content Include="Scripts\PortfolioApp.js" />
+    <Content Include="Scripts\PortfolioApp.Services.js" />
     <Content Include="Scripts\responsive-img.min.js" />
     <Content Include="Scripts\apps\json-viewer\style.css" />
+    <Content Include="Temp.html" />
     <Content Include="Test.aspx" />
+    <Content Include="Test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -247,6 +264,7 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
     <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Scripts\PortfolioApp.Controllers.js" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

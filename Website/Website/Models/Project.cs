@@ -29,6 +29,8 @@ namespace Rae.Website.Models
         [StringLength(200)]
         public string Categories { get; set; }
 
+        public bool IsFeatured { get; set; }
+
         public virtual List<Media> Media { get; set; }
 
         [Required]

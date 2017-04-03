@@ -17,6 +17,23 @@ namespace Rae.Website.Models
         [StringLength(1000)]
         public string Description { get; set; }
 
+        public bool IsFeatured { get; set; }
+
         public virtual List<Media> Media { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        [Display(Name = "Url of Large Resolution Featured Image")]
+        public string FeaturedImageUrlLarge { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        [Display(Name = "Url of Medium Resolution Featured Image")]
+        public string FeaturedImageUrlMedium { get; set; }
+
+        [Required]
+        [StringLength(255)]
+        [Display(Name = "Url of Small Resolution Featured Image")]
+        public string FeaturedImageUrlSmall { get; set; }
     }
 }

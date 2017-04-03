@@ -7,6 +7,11 @@ namespace Rae.Website.Models.Repositories
 {
     public class ProjectRepository : Repository<Project>
     {
+        public IQueryable<Project> GetFeatured()
+        {
+            return dbSet.Where(p => p.IsFeatured);
+        }
+
         public IQueryable<Project> GetByTitle(string Title, bool Exact = true)
         {
             if (Exact)
