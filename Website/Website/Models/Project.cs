@@ -1,6 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Linq;
 
 namespace Rae.Website.Models
 {
@@ -31,7 +32,7 @@ namespace Rae.Website.Models
 
         public bool IsFeatured { get; set; }
 
-        public virtual List<Media> Media { get; set; }
+        public virtual IQueryable<Media> Media { get; set; }
 
         [Required]
         [StringLength(255)]

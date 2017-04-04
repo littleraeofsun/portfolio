@@ -40,6 +40,12 @@
 
 			//convert comma-delimited strings into arrays
   			$scope.project.Tools = $scope.project.Tools.replace(/\s/g, '').split(',');
+
+  			portfolioAPIservice.getProjectMedia($scope.id).then(function (response) {
+  				if (response.status === 200) {
+  					$scope.project.Media = response.data;
+  				}
+  			});
   		}
   		//TODO: handle failure
   	});
@@ -69,6 +75,12 @@
   		if (response.status === 200) {
   			document.title = response.data.Name + " | littleraeofsun";
   			$scope.album = response.data;
+
+  			portfolioAPIservice.getAlbumMedia($scope.id).then(function (response) {
+  				if (response.status === 200) {
+  					$scope.album.Media = response.data;
+  				}
+  			});
   		}
   		//TODO: handle failure
   	});
@@ -85,6 +97,16 @@
   			$scope.albums = response.data;
   		}
   		//TODO: handle failure
+  	});
+  })
+
+  //CONTACT CONTROLLER
+  .controller('contactController', function ($scope, portfolioAPIservice) {
+  	document.title = "Contact Me | littleraeofsun";
+
+  	//run script after view loaded
+  	$scope.$on('$viewContentLoaded', function () {
+
   	});
   })
 

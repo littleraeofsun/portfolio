@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
@@ -18,9 +19,11 @@ namespace Rae.Website.Models
         public string Description { get; set; }
 
         public int? ProjectId { get; set; }
+        [JsonIgnore]
         public virtual Project Project { get; set; }
         
         public int? AlbumId { get; set; }
+        [JsonIgnore]
         public virtual Album Album { get; set; }
     }
 }
