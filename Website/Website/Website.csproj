@@ -150,6 +150,7 @@
     <Content Include="images\rocket.gif" />
     <Content Include="partials\album.html" />
     <Content Include="partials\albums.html" />
+    <Content Include="partials\contact.html" />
     <Content Include="partials\home.html" />
     <Content Include="partials\project.html" />
     <Content Include="partials\projects.html" />
