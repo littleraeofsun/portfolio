@@ -44,6 +44,25 @@ a:focus, a:hover {
     margin: -164px 0 0 -400px;
     background: url(../images/loading.gif) no-repeat;
 }
+.section-loader {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 99998;
+}
+.section-loader .section-loader-gif {
+    display: block;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -100px 0 0 -100px;
+    background: url(../images/loading-sun.gif) no-repeat;
+}
 
 /* Top Nav Styles */
 .navbar-nav>li>a {
@@ -218,6 +237,9 @@ a:focus, a:hover {
 }
 .portfolio-item:hover .portfolio-text{
     top: 55%;
+}
+.album-gallery, .portfolio-gallery {
+    position: relative;
 }
 .album-gallery .portfolio-text, .project-gallery .portfolio-text {
     font-size: 2em;

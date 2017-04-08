@@ -84,6 +84,11 @@
   		}
   		//TODO: handle failure
   	});
+
+  	//apply scroll button functionality after view loaded
+  	$scope.$on('$viewContentLoaded', function () {
+  		$('.section-loader').fadeOut(500);
+  	});
   })
 
   //ALBUMS CONTROLLER
@@ -97,6 +102,11 @@
   			$scope.albums = response.data;
   		}
   		//TODO: handle failure
+  	});
+
+  	//apply scroll button functionality after view loaded
+  	$scope.$on('$viewContentLoaded', function () {
+  		$('.section-loader').fadeOut(500);
   	});
   })
 

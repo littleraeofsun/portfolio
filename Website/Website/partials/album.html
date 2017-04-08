@@ -7,6 +7,7 @@
     </div>
     <div class="container-full">
         <div class="row album-gallery no-gutters text-center">
+            <div class="section-loader"><span class="section-loader-gif"></span></div>
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 gallery-item" ng-repeat="media in album.Media">
                 <a href="{{media.UrlLarge}}" data-lightbox="album-gallery" data-title="{{media.Description}}">
                     <img class="img-responsive" src="{{media.UrlMedium}}" />
