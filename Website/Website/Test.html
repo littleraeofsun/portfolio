@@ -35,28 +35,29 @@
     <script src="Scripts/apps/json-viewer/script.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=68f9a3498ff770330ef51429836ba68a&photoset_id=72157678772804144&user_id=82935922%40N05&format=json&nojsoncallback=1&api_sig=516952fb52b8c5bf3cad3aadd0165cf6";
+            var url = "https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=25bc05c5db70de8e7f5c7716568e02db&photoset_id=72157680434051631&format=json&nojsoncallback=1&auth_token=72157680439993801-afaee1f56c77a2b2&api_sig=86ba3d7008fec6a78578c709909e0c8e";
             $.getJSON(url, null, function (data) {
                 $('#TestResults').append("<div><b>" + data.photoset.title + "</b></div><br/><br/>");
                 for (var i = 0; i < data.photoset.photo.length; i++) {
-                    $.getJSON("https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=68f9a3498ff770330ef51429836ba68a&photo_id=" + data.photoset.photo[i].id + "&format=json&nojsoncallback=1",
+                    $.getJSON("https://api.flickr.com/services/rest/?method=flickr.photos.getSizes&api_key=25bc05c5db70de8e7f5c7716568e02db&photo_id=" + data.photoset.photo[i].id + "&format=json&nojsoncallback=1",
                         null, (function(photoTitle) {
                             return function (photoData) {
-                                var photo = '<div>Context.Media.Add(new Image()<br/>{<br/>Album = blandWedding,<br/>Name = "' + photoTitle + '",<br/>Description = "",<br/>';
+                                var preview = '';
+                                var photo = 'Context.Media.Add(new Image()<br/>{<br/>Project = cityoftulsaorg,<br/>Name = "' + photoTitle + '",<br/>Description = "",<br/>';
                                 for (var i = 0; i < photoData.sizes.size.length; i++) {
                                     if (photoData.sizes.size[i].width == "640" || photoData.sizes.size[i].height == "640") {
+                                        preview += '<div style="display:inline-block;background:url(' + photoData.sizes.size[i].source + ') center no-repeat;background-size:cover;">';
                                         photo += 'UrlSmall = "' + photoData.sizes.size[i].source + '",<br/>';
                                     }
                                     else if (photoData.sizes.size[i].width == "1024" || photoData.sizes.size[i].height == "1024") {
                                         photo += 'UrlMedium = "' + photoData.sizes.size[i].source + '",<br/>';
-                                        //$('#TestResults').append('<div class="medium">' + photoData.sizes.size[i].source + '</div>');
                                     }
-                                    else if (photoData.sizes.size[i].width == "2048" || photoData.sizes.size[i].height == "2048") {
+                                    else if (photoData.sizes.size[i].width == "1920" || photoData.sizes.size[i].height == "1920") {
                                         photo += 'UrlLarge = "' + photoData.sizes.size[i].source + '",<br/>';
                                     }
                                 }
                                 photo += '});</div><br/><br/>';
-                                $('#TestResults').append($(photo));
+                                $('#TestResults').append($(preview + photo));
                             };
                         }(data.photoset.photo[i].title)));
                 }
