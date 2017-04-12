@@ -9,14 +9,88 @@ namespace Rae.Website.Models
     public class PortfolioDataContextInitializer : DropCreateDatabaseAlways<PortfolioContext>
     {
         protected override void Seed(PortfolioContext Context)
-        {            
+        {
+            #region Project: Ashcorp
+            Project ashcorp = Context.Projects.Add(new Project()
+            {
+                Title = "Ashcorp",
+                Customer = "Brian Smith",
+                Url = "http://www.ashcorptechnologies.com",
+                Year = 2017,
+                Categories = "Website, Branding",
+                Tools = "Dreamweaver, PHP, Bootstrap, Photoshop, Illustrator",
+                Description = @"I was introduced to Brian Smith through an investment opportunity. Ashcorp, his company, was still very young, and Brian needed a lot of help with branding and media. Initially I gave him some feedback on his existing website and assisted him with a few site management tasks.
+In exchange for stock in his growing company, I put together a strategy for designing his new site so that it could be developed quickly and would present his products in a meaningful way. During the planning process I realized Brian needed a lot in the way of graphics, so I put together a variety of logo ideas for his various products, and we worked together to produce the logos currently on the site.
+Because he had little interest in personally maintaining his site, I determined the best solution for Brian would be to make a series of static PHP pages that I could easily and quickly adjust to fit his needs. I built the pages with bootstrap and bootstrap plug-ins so his site would be mobile-friendly.
+Note: this site is still a work in progress.",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "https://farm3.staticflickr.com/2885/33833726451_e236828af8_z.jpg",
+                FeaturedImageUrlMedium = "https://farm3.staticflickr.com/2885/33833726451_e236828af8_b.jpg",
+                FeaturedImageUrlLarge = "https://farm3.staticflickr.com/2885/33833726451_54132d9029_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-site_WM",
+                Description = "The Home page features the Ashcorp logo and introduction to Front Row Ticket",
+                UrlSmall = "https://farm3.staticflickr.com/2885/33833726451_e236828af8_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2885/33833726451_e236828af8_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2885/33833726451_54132d9029_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-site-slides-selfzone_WM",
+                Description = "The slider feature presents the primary focuses of Ashcorp, including SelfZone",
+                UrlSmall = "https://farm3.staticflickr.com/2867/33922620736_08aedc2e70_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2867/33922620736_08aedc2e70_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2867/33922620736_0aa1132cf3_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-site-slides-floatinginternet_WM",
+                Description = "The home page slider also demonstrates the concept art for Floating Internet",
+                UrlSmall = "https://farm4.staticflickr.com/3930/33120298104_0de7f321f3_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3930/33120298104_0de7f321f3_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3930/33120298104_25e4eecd0e_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-site-frontrow_WM",
+                Description = "The Front Row Ticket feature page",
+                UrlSmall = "https://farm3.staticflickr.com/2814/33964000675_466326d8f2_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2814/33964000675_466326d8f2_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2814/33964000675_5e3a74a79e_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-selfzone-logoevolution_WM",
+                Description = "Logo evolution for SelfZone, the first project I worked on for Ashcorp",
+                UrlSmall = "https://farm3.staticflickr.com/2934/33922620446_5d15b175d9_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2934/33922620446_5d15b175d9_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2934/33922620446_be2b5ec32b_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = ashcorp,
+                Name = "ashcorp-frontrow-logoevolution_WM",
+                Description = "Logo evolution for Front Row Ticket",
+                UrlSmall = "https://farm3.staticflickr.com/2815/33120298154_587d555c17_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2815/33120298154_587d555c17_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2815/33120298154_f3f3fc46ea_o.png",
+            });
+            #endregion
             #region Project: Tulsa City Website
             Project cityoftulsaorg = Context.Projects.Add(new Project()
             {
                 Title = "City of Tulsa Website",
                 Customer = "City of Tulsa",
+                Url = "http://www.cityoftulsa.org",
                 Year = 2017,
-                Tools = "Visual Studio, Umbraco 7, MVC, C#, jQuery, KnockoutJS, Photoshop, MSSQL, Git",
+                Tools = "Visual Studio, Umbraco 7, MVC, C#, Bootstrap, jQuery, KnockoutJS, Photoshop, MSSQL, Git",
                 Description = @"In 2013 the Tulsa IT and Communications departments decided that the city website needed updating. The old site, built back around 2005, ran on Umbraco 4 CMS and was several years behind on patches. The layout only allowed for 580px of content on pages, and the extensibility options were limited and rigid due to a lack of training on the CMS.
 I volunteered to work on the redesign of the site and began researching responsive web design methods and CMS options between my normal tasks. Ultimately I chose to go with Bootstrap and Umbraco 7. Because I had never used either of these frameworks before, I put together a series of proof of concept projects to learn the ropes and demonstrate the capabilities to the rest of my team.
 With Umbraco's online tutorial series and Level 2 certification course, I was able to build a development site based on the Photoshop mock-ups from our Communications department. I taught the rest of our development team how to migrate our old WebForms applications to MVC macros in Umbraco and how to use Git to save and manage their changes.
@@ -119,6 +193,277 @@ The core focus of the new site was to make things easier to find. I leveraged Um
                 UrlLarge = "https://farm3.staticflickr.com/2889/33964012495_04563ef0eb_o.png",
             });
             #endregion
+            #region Project: Tulsa Job Application
+            Project tulsajobapp = Context.Projects.Add(new Project()
+            {
+                Title = "City of Tulsa Job Application",
+                Customer = "City of Tulsa",
+                Url = "https://www.cityoftulsa.org/government/departments/human-resources/employment/application-form/",
+                Year = 2017,
+                Tools = "Visual Studio, Umbraco 7, MVC, C#, Bootstrap, jQuery, KnockoutJS, MSSQL",
+                Description = @"The first project I worked on at the City of Tulsa was converting the PDF job application into an online form on the public-facing website. The Human Resources department had a legacy system they used for storing and retrieving applications, and my solution needed to feed into that.
+I explored a couple different approaches and wound up going with a hybrid KnockoutJS WebForm, an AJAX broker ASPX page, and Web Services behind the firewall which interacted with an MSSQL database. Upon submission, the application data was transformed into plain text that could be entered into the HR legacy system. Over the next two years we added a version of the application for internal positions as well as for Fire Department recruitment.
+When it came time to redesign the City of Tulsa website, I took the opportunity to rebuild the job applications. I redesigned the front-end using Bootstrap and consolidated the logic into a single code base. I also experimented with inheritance of my Knockout viewmodels to further eliminate duplicate code. Instead of a broker page, the new applications use a UmbracoWebAPI services to ferry requests behind the firewall.",
+                Categories = "Website",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "/images/featured/job-app-small.jpg",
+                FeaturedImageUrlMedium = "/images/featured/job-app-medium.jpg",
+                FeaturedImageUrlLarge = "/images/featured/job-app-large.jpeg",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp_WM",
+                Description = "The new City of Tulsa external job application",
+                UrlSmall = "https://farm4.staticflickr.com/3940/33806169712_fe0d34456f_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3940/33806169712_fe0d34456f_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3940/33806169712_61712ce84e_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-progress-toast_WM",
+                Description = "Form progress is saved automatically 10 seconds after changes are made",
+                UrlSmall = "https://farm3.staticflickr.com/2866/33806169802_714694c61c_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2866/33806169802_714694c61c_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2866/33806169802_1024584916_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-positions_WM",
+                Description = "Available positions are maintained by HR in Umbraco and pulled into the application via Controller",
+                UrlSmall = "https://farm3.staticflickr.com/2908/33806169852_b8556df878_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2908/33806169852_b8556df878_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2908/33806169852_8615f9ecaf_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-criminal_WM",
+                Description = "With the Ban the Box initiative, only certain secure positions trigger the criminal background questions",
+                UrlSmall = "https://farm3.staticflickr.com/2896/33150697183_98a7f2af1b_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2896/33150697183_98a7f2af1b_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2896/33150697183_2faa6420de_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-education_WM",
+                Description = "The application provides spaces for applicants to list comprehensive education history",
+                UrlSmall = "https://farm3.staticflickr.com/2908/33150697143_54c127554a_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2908/33150697143_54c127554a_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2908/33150697143_75df0b1ac9_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-error_WM",
+                Description = "Fields and sections are blue for incomplete fields, but they turn red for fields and sections that have errors",
+                UrlSmall = "https://farm4.staticflickr.com/3935/33806170052_bdda79d7bc_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3935/33806170052_bdda79d7bc_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3935/33806170052_54aff1681a_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-extracommunication_WM",
+                Description = "Issue notification by the Next button ensures applicants are aware of their progress",
+                UrlSmall = "https://farm3.staticflickr.com/2948/33806169992_685c3a338e_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2948/33806169992_685c3a338e_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2948/33806169992_7811f2acc3_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-summary_WM",
+                Description = "The summary section notifies applicants of issues or potentially overlooked areas",
+                UrlSmall = "https://farm4.staticflickr.com/3940/33806169772_d2e1733131_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3940/33806169772_d2e1733131_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3940/33806169772_640e80eea1_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-internal_WM",
+                Description = "The internal job application has a handful of variations, including the employee number field",
+                UrlSmall = "https://farm3.staticflickr.com/2855/33806169912_fa96422fac_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2855/33806169912_fa96422fac_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2855/33806169912_4d4e4b409b_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = tulsajobapp,
+                Name = "jobapp-fire_WM",
+                Description = "The Fire and Police applications feature more comprehensive sections, such as Criminal Background",
+                UrlSmall = "https://farm3.staticflickr.com/2834/33806169952_68c0b100bd_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2834/33806169952_68c0b100bd_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2834/33806169952_b88d4349e2_o.png",
+            });
+            #endregion
+            #region Project: Job App Admin Portal
+            Project jobappportal = Context.Projects.Add(new Project()
+            {
+                Title = "Job Application Admin Portal",
+                Customer = "City of Tulsa",
+                Year = 2017,
+                Tools = "Visual Studio, Entity Framework, C# WebAPI, AngularJS, Bootstrap, MSSQL",
+                Description = @"After providing Human Resources with an online job application form, they requested a tool to be able to look up forms in the event that someone was having trouble completing the form.
+Initially I built a very quick and dirty ASPX search page housed on our intranet server to query the database. As we added different job applications, I adapted the search page into each project, including the addition of a resubmit button for application search results.
+With the website relaunch and the consolidation of the job applications, I took the opportunity to rebuild the search pages with more contemporary tools. I centralized the searches and reports in an AngularJS front-end portal with WebAPI controllers and a database-first Entity Framework context.
+The new Job Apps Admin Portal is more robust and easier to use. It also serves as a demonstration project for how Entity Framework, WebAPI (with RoleProvider Authorization), and Angular can be utilized in our environment.
+Note: this is very much a work in progress.",
+                Categories = "Website",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "/images/featured/job-portal-small.jpg",
+                FeaturedImageUrlMedium = "/images/featured/job-portal-medium.jpg",
+                FeaturedImageUrlLarge = "/images/featured/job-portal-large.jpeg",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-home_WM",
+                Description = "The Job Application Administration Portal centralizes applicant information for HR",
+                UrlSmall = "https://farm4.staticflickr.com/3945/33922682236_297e2540a0_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3945/33922682236_297e2540a0_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3945/33922682236_31e18e3926_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-search_WM",
+                Description = "The portal features tailored searches for each type of application",
+                UrlSmall = "https://farm4.staticflickr.com/3947/33922682116_61ac35ca6d_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3947/33922682116_61ac35ca6d_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3947/33922682116_541e40b1fe_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-searchresults_WM",
+                Description = "",
+                UrlSmall = "https://farm4.staticflickr.com/3933/33922682406_6039989960_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3933/33922682406_6039989960_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3933/33922682406_f3ceac4333_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-searchresult_WM",
+                Description = "",
+                UrlSmall = "https://farm3.staticflickr.com/2823/33833804541_dd0faac690_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2823/33833804541_dd0faac690_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2823/33833804541_b90889b708_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-resumixtext_WM",
+                Description = "",
+                UrlSmall = "https://farm3.staticflickr.com/2864/33922682186_b294bef4bc_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2864/33922682186_b294bef4bc_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2864/33922682186_8719d12438_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = jobappportal,
+                Name = "jobappportal-dailyreport_WM",
+                Description = "",
+                UrlSmall = "https://farm4.staticflickr.com/3945/33922682326_79df8fffc2_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3945/33922682326_79df8fffc2_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3945/33922682326_986bdf1b62_o.png",
+            });
+            #endregion
+            #region Project: Lodging Tax Form
+            Project lodgingtax = Context.Projects.Add(new Project()
+            {
+                Title = "Tulsa Lodging Income Tax Form",
+                Customer = "City of Tulsa",
+                Year = 2016,
+                Tools = "Visual Studio, ASP.NET, C#, Bootstrap, jQuery, KnockoutJS, MSSQL",
+                Description = @"In 2015 the Treasury department of Tulsa established an electronic filing process for Hotels and Lodging tax collection. They started out with a PDF form, but understandably wanted a less cumbersome solution.
+I built out what I thought form should look like in pure HTML and Bootstrap to get acceptance on the appearance and intended workflow. After confirming the direction of the form with Treasury, I built out the database, business logic services, and local web service in the client project to piggyback AJAX calls to the business services behind the firewall.
+In the final testing stage, the Treasury department asked if there was a way citizens could upload or import lists of exemptions to avoid typing them all out by hand, so I put together a last-minute basic copy and paste workflow using a special Excel document and video tutorial.
+After the first few months of use, Treasury relayed to us that citizens wanted a way to save and auto-populate data for their tax forms each month. Initially they proposed an account system with logins. After we determined that idea to be unfeasible, I added a Clone feature for submitted forms that would replicate the desired data.",
+                Categories = "Website, Video",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "/images/featured/lodging-tax-small.jpg",
+                FeaturedImageUrlMedium = "/images/featured/lodging-tax-medium.jpg",
+                FeaturedImageUrlLarge = "/images/featured/lodging-tax-large.jpeg",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax_WM",
+                Description = "Hotel owners use the Lodging Tax Form to determine their monthly income tax",
+                UrlSmall = "https://farm3.staticflickr.com/2862/33833817571_27c21e356c_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2862/33833817571_27c21e356c_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2862/33833817571_cb14b0cff6_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-progress_WM",
+                Description = "The form uses KnockoutJS to communicate form status throughout and in the footer bar",
+                UrlSmall = "https://farm3.staticflickr.com/2859/33833816391_15acedb83e_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2859/33833816391_15acedb83e_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2859/33833816391_a09e236772_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-exemptions-tutorial_WM",
+                Description = "Exemption sections feature a rough import workflow with explanatory video",
+                UrlSmall = "https://farm3.staticflickr.com/2851/33833816691_fda1d4c569_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2851/33833816691_fda1d4c569_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2851/33833816691_43cf108d85_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-adjustments_WM",
+                Description = "Adjustments can be entered to correct for previous returns",
+                UrlSmall = "https://farm4.staticflickr.com/3931/33833816861_ba95b22da4_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3931/33833816861_ba95b22da4_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3931/33833816861_bffff66538_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-countdown_WM",
+                Description = "The alert at the top of the page gives a countdown to the next deadline",
+                UrlSmall = "https://farm3.staticflickr.com/2882/33833816741_e9500852d0_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2882/33833816741_e9500852d0_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2882/33833816741_06a99b49fb_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-final_WM",
+                Description = "The Summary tab displays final calculations and fields for submitter information",
+                UrlSmall = "https://farm3.staticflickr.com/2925/33833816521_1f4dbbd962_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2925/33833816521_1f4dbbd962_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2925/33833816521_068020609b_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-submitted_WM",
+                Description = "Submitted tax returns provide users with payment information, and can be printed or cloned",
+                UrlSmall = "https://farm3.staticflickr.com/2869/33833817661_b834cdfbc7_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2869/33833817661_b834cdfbc7_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2869/33833817661_09e456bd45_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = lodgingtax,
+                Name = "lodgintax-email_WM",
+                Description = "Submission confirmation email is sent to the submitters with summary information and links to view their form later",
+                UrlSmall = "https://farm3.staticflickr.com/2905/33833816641_e89e2c1521_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2905/33833816641_e89e2c1521_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2905/33833816641_00942355c7_o.png",
+            });
+            #endregion
             #region Project: Injury Form
             Project injuryForm = Context.Projects.Add(new Project()
             {
@@ -131,9 +476,9 @@ I started putting together some designs for the system in Microsoft SketchFlow t
 The project took about two months from planning to launch, and is still used daily. The Safety group and Human Resources reported a nearly 50% drop in reported injuries and costs in the years following the launch of the form.",
                 Categories = "Website",
                 IsFeatured = true,
-                FeaturedImageUrlLarge = "/images/featured/injury-form-large.jpg",
+                FeaturedImageUrlSmall = "/images/featured/injury-form-small.jpg",
                 FeaturedImageUrlMedium = "/images/featured/injury-form-medium.jpg",
-                FeaturedImageUrlSmall = "/images/featured/injury-form-small.jpg"
+                FeaturedImageUrlLarge = "/images/featured/injury-form-large.jpeg",
             });
             Context.Media.Add(new Image()
             {
@@ -224,6 +569,119 @@ The project took about two months from planning to launch, and is still used dai
                 UrlSmall = "https://c1.staticflickr.com/4/3946/32935312753_b1cd68d897_z.jpg",
                 UrlMedium = "https://c1.staticflickr.com/4/3946/32935312753_b1cd68d897_b.jpg",
                 UrlLarge = "https://c2.staticflickr.com/4/3946/32935312753_0ca5297c77_o.png"
+            });
+            #endregion
+            #region Project: SketchOver
+            Project sketchover = Context.Projects.Add(new Project()
+            {
+                Title = "SketchOvert",
+                Customer = "Me",
+                Year = 2013,
+                Categories = "Desktop",
+                Tools = "Visual Studio, C# WPF, Illustrator",
+                Description = @"If you've used PowerPoint before, you might be familiar with the Pen tool in Presentation Mode: it allows you to make marks on your slides to clarify or supplement your presentation information. A few years back I came up with the idea for something that would allow me to sketch like that over top of other programs too.
+My search yielded one program for Macs but nothing sufficient for PC, so I set to work writing my own desktop sketch program in WPF.
+SketchOver features a comprehensive color picker, pencil and highlighter tools, eraser and line removal capabilities, and the ability to capture screenshots as well as saving and opening canvases using the .sko registered file type. The application is also touchscreen and tablet-friendly, and will swap between the Pen tool and the Eraser tool when flipping advanced styluses (Wacom, etc.).
+Note: this project is still a work in progress, and I hope to be able to add more features to it in the future.",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "https://farm4.staticflickr.com/3944/33578983870_1bb0cc63e4_z.jpg",
+                FeaturedImageUrlMedium = "https://farm4.staticflickr.com/3944/33578983870_1bb0cc63e4_b.jpg",
+                FeaturedImageUrlLarge = "https://farm4.staticflickr.com/3944/33578983870_b896205d89_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = sketchover,
+                Name = "logo color meaning_WM",
+                Description = "SketchOver allows you to make notes on top of any application",
+                UrlSmall = "https://farm4.staticflickr.com/3684/33150759943_a7b15da057_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3684/33150759943_a7b15da057_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3684/33150759943_8ccaa42ab8_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = sketchover,
+                Name = "help and eraser_WM",
+                Description = "The eraser tool can erase parts of lines and the help menu explains the other tools",
+                UrlSmall = "https://farm3.staticflickr.com/2909/33150760113_ed0377d3f2_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2909/33150760113_ed0377d3f2_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2909/33150760113_880be0ca67_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = sketchover,
+                Name = "code review_WM",
+                Description = "SketchOver can be used for code reviews or demos",
+                UrlSmall = "https://farm3.staticflickr.com/2932/33150760333_ec3e4e41c5_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2932/33150760333_ec3e4e41c5_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2932/33150760333_d1effea6e0_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = sketchover,
+                Name = "wacom_WM",
+                Description = "Demo of SketchOver on a tablet PC being used to correct page content",
+                UrlSmall = "https://farm4.staticflickr.com/3944/33578983870_1bb0cc63e4_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3944/33578983870_1bb0cc63e4_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3944/33578983870_b896205d89_o.png",
+            });
+            #endregion
+            #region Project: IntersectionInk
+            Project intersectionink = Context.Projects.Add(new Project()
+            {
+                Title = "IntersectionInk",
+                Customer = "Alabama CAPS",
+                Year = 2010,
+                Categories = "Desktop",
+                Tools = "Visual Studio, C# WPF, XML/XSD, Illustrator",
+                Description = @"After my senior capstone course, I got the opportunity to participate in an internship program hosted by the University of Alabama Center for Advanced Public Safety (CAPS).
+Because of my background in .NET and User Interface design, they offered me the opportunity to work on a replacement for the collision diagramming application their civil engineers had relied on since the 90's. They took data from their CARE collision dashboard and mapped it into the application so that civil engineers could spatially analyze the data and come up with solutions to reduce the risk of collisions in intersections or roadways.
+I chose to build my application in WPF because the CAPS engineers wanted it to run on PCs, and because I felt it would promote the longevity of the application. Over the course of the summer I worked closely with the CAPS software engineers to determine the method of transporting the data between our applications as well the possibility of integrating my application into their .NET dashboard.
+I designed a set of rules in an XSD for defining an intersection in XML as well as detailing any collisions within the intersection. I worked with the CAPS engineers to transform their data into XML according to my schema rules and pipe it into my application. IntersectionInk would then procedurally render the intersection and collisions. I use symbols to illustrate the state of vehicles when a collision occurred and unambiguous nautical terms for describing how the vehicles interacted during the collision.",
+                IsFeatured = true,
+                FeaturedImageUrlSmall = "/images/featured/intersection-ink-small.jpg",
+                FeaturedImageUrlMedium = "/images/featured/intersection-ink-medium.jpg",
+                FeaturedImageUrlLarge = "/images/featured/intersection-ink-large.jpg",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = intersectionink,
+                Name = "4 way_WM",
+                Description = "Demo of a 4-way intersection with collisions with source XML file",
+                UrlSmall = "https://farm3.staticflickr.com/2843/33966439365_c713c2c8ce_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2843/33966439365_c713c2c8ce_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2843/33966439365_6d61bc093a_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = intersectionink,
+                Name = "3 way_WM",
+                Description = "Demo of a 3-way intersection with collisions with source XML file",
+                UrlSmall = "https://farm3.staticflickr.com/2871/33966439465_835840eeee_z.jpg",
+                UrlMedium = "https://farm3.staticflickr.com/2871/33966439465_835840eeee_b.jpg",
+                UrlLarge = "https://farm3.staticflickr.com/2871/33966439465_f0c5b50d68_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = intersectionink,
+                Name = "xsd_WM",
+                Description = "Sample of XSD used to define the intersection XML",
+                UrlSmall = "https://farm4.staticflickr.com/3703/33808632042_5d197b5445_z.jpg",
+                UrlMedium = "https://farm4.staticflickr.com/3703/33808632042_5d197b5445_b.jpg",
+                UrlLarge = "https://farm4.staticflickr.com/3703/33808632042_a997130f5b_o.png",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = intersectionink,
+                Name = "slide-intersection_WM",
+                Description = "Presentation slide for intersection serialization and graphical explanation",
+                UrlSmall = "https://farm3.staticflickr.com/2853/33808631842_38601b1dc7_z.jpg",
+            });
+            Context.Media.Add(new Image()
+            {
+                Project = intersectionink,
+                Name = "slide-collision-detail_WM",
+                Description = "Presentation slide for drilldown of important collision data from CARE",
+                UrlSmall = "https://farm3.staticflickr.com/2815/33966439325_a4353954ba_z.jpg",
             });
             #endregion
 

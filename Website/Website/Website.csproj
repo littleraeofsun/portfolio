@@ -147,6 +147,22 @@
     <Content Include="images\branding.gif" />
     <Content Include="images\code.gif" />
     <Content Include="images\design.gif" />
+    <Content Include="images\featured\injury-form-large.jpeg" />
+    <Content Include="images\featured\intersection-ink-large.jpg" />
+    <Content Include="images\featured\intersection-ink-medium.jpg" />
+    <Content Include="images\featured\intersection-ink-small.jpg" />
+    <Content Include="images\featured\job-app-large.jpeg" />
+    <Content Include="images\featured\job-app-medium.jpg" />
+    <Content Include="images\featured\job-app-small.jpg" />
+    <Content Include="images\featured\job-portal-large.jpeg" />
+    <Content Include="images\featured\job-portal-medium.jpg" />
+    <Content Include="images\featured\job-portal-small.jpg" />
+    <Content Include="images\featured\lodging-tax-large.jpeg" />
+    <Content Include="images\featured\lodging-tax-medium.jpg" />
+    <Content Include="images\featured\lodging-tax-small.jpg" />
+    <Content Include="images\featured\sketchover-large.jpg" />
+    <Content Include="images\featured\sketchover-medium.jpg" />
+    <Content Include="images\featured\sketchover-small.jpg" />
     <Content Include="images\loading-sun.gif" />
     <Content Include="images\rocket.gif" />
     <Content Include="partials\album.html" />
@@ -166,7 +182,6 @@
     <None Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="images\code.svg" />
     <Content Include="images\fingerprint.svg" />
-    <Content Include="images\featured\injury-form-large.jpg" />
     <Content Include="images\featured\injury-form-medium.jpg" />
     <Content Include="images\featured\injury-form-small.jpg" />
     <Content Include="images\laptop-sun-1049.jpg" />
@@ -207,7 +222,7 @@
     <Content Include="Scripts\apps\json-viewer\style.css" />
     <Content Include="Temp.html" />
     <Content Include="Test.aspx" />
-    <Content Include="Test.html" />
+    <None Include="Test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
