@@ -76,12 +76,6 @@
         //        }
         //    });
         //}
-        $(document).ready(function () {
-            var url = ""; //https://api.flickr.com/services/rest/?method=flickr.photosets.getPhotos&api_key=68f9a3498ff770330ef51429836ba68a&photoset_id=72157678772804144&user_id=82935922%40N05&format=json&nojsoncallback=1&api_sig=516952fb52b8c5bf3cad3aadd0165cf6";
-            $.getJSON(url, null, function (data) {
-                var test = "";
-            });
-        });
     </script>
 </body>
 </html>

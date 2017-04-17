@@ -11,6 +11,7 @@
             <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 portfolio-item" ng-repeat="album in albums">
                 <a href="#/albums/{{album.AlbumId}}">
                     <img class="img-responsive" src="{{album.FeaturedImageUrlMedium}}">
+                    <div class="portfolio-item-overlay"></div>
                     <div class="portfolio-text">{{album.Name}}</div>
                 </a>
             </div>
