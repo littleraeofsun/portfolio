@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html ng-app="PortfolioApp">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>littleraeofsun</title>
+    <link href="favicon.png" rel="icon" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet" />
+    <link href="Scripts/apps/lightbox/css/lightbox.css" rel="stylesheet" />
+    <link href="Content/styles.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="page-loader"><span class="page-loader-gif"></span></div>
+    <header>
+        <nav id="MainNav" class="navbar navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#"><img id="NavLogo" class="img-responsive" src="images/logo_small.png" /></a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#/projects">Projects</a></li>
+                        <li><a href="#/albums">Albums</a></li>
+                        <li><a href="#/contact">Contact</a></li>
+                    </ul>
+                    <!-- COMING SOON! :D
+                    <form class="navbar-form navbar-right">
+                        <input type="text" class="form-control" placeholder="Search...">
+                    </form>-->
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <ng-view></ng-view>
+    </main>
+    <footer>
+        <div class="container text-center">
+            <div class="row">
+                <div class="col-xs-12">
+                    <h1 class="footer-name">RAE MELTON</h1>
+                    <div class="footer-tagline">Developer & Designer</div>
+                </div>
+                <div class="col-xs-12">
+                    <ul class="footer-nav">
+                        <li><a href="#/">Home</a></li>
+                        <li><a href="#/projects">Projects</a></li>
+                        <li><a href="#/albums">Albums</a></li>
+                        <li><a href="#/contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr />
+            <p>©2017 <a href="#">littleraeofsun.com</a> | All Rights Reserved</p>
+        </div>
+    </footer>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script src="Scripts/apps/angular/angular-route.min.js"></script>
+    <script src="Scripts/apps/angular/angular-touch.min.js"></script>
+    <script src="Scripts/apps/angular/angular-animate.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap.min.js"></script>
+    <script src="Scripts/angular-ui/ui-bootstrap-tpls.min.js"></script>
+    <script src="Scripts/apps/lightbox/js/lightbox.js"></script>
+    <script src="Scripts/PortfolioApp.js"></script>
+    <script src="Scripts/PortfolioApp.Controllers.js"></script>
+    <script src="Scripts/PortfolioApp.Services.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            //fadeout preloader
+            $(window).load(function () {
+                $('#page-loader').fadeOut(1000);
+            });
+
+            //top nav animation/transition
+            if ($(window).scrollTop() === 0) {
+                $('#MainNav').removeClass('scrolled');
+            }
+            else {
+                $('#MainNav').addClass('scrolled');
+            }
+
+            $(window).scroll(function () {
+                if ($(window).scrollTop() === 0) {
+                    $('#MainNav').removeClass('scrolled');
+                }
+                else {
+                    $('#MainNav').addClass('scrolled');
+                }
+            });
+        });
+    </script>
+</body>
+</html>

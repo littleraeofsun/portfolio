@@ -1,0 +1,19 @@
+﻿<div class="container-full">
+    <div class="row page-title text-center">
+        <div class="title-background" style="background-image: url(/images/laptop-sun-4196.jpg); background-position: center top; opacity: 1;"></div>
+        <div class="col-xs-12 title-text">
+            <h1>Projects</h1>
+        </div>
+    </div>
+    <div class="container-full">
+        <div class="row project-gallery no-gutters">
+            <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 portfolio-item" ng-repeat="project in projects">
+                <a href="#/projects/{{project.ProjectId}}">
+                    <img class="img-responsive" src="{{project.FeaturedImageUrlMedium}}">
+                    <div class="portfolio-item-overlay"></div>
+                    <div class="portfolio-text">{{project.Title}}</div>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,54 @@
+﻿<div id="MainDisplay" class="container-full text-center">
+    <div id="MainHeader">
+        <div class="row" id="MainHeaderText">
+            <img id="MainLogo" class="img-responsive" src="images/logo_main.png" />
+            <div class="scroll-button" scroll-target=".main-portfolio">
+                Scroll Down
+                <span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-full main-portfolio">
+    <div class="row no-gutters">
+        <div class="col-md-4 col-sm-6 col-xs-12 portfolio-item" ng-repeat="project in projects">
+            <a href="#/projects/{{project.ProjectId}}">
+                <img class="img-responsive" src="{{project.FeaturedImageUrlMedium}}">
+                <div class="portfolio-item-overlay"></div>
+                <div class="portfolio-text">{{project.Title}}</div>
+            </a>
+        </div>
+    </div>
+</div>
+<div class="container-full main-skills">
+    <div class="row text-center skill-section no-gutters">
+        <div class="col-md-3 col-sm-6 col-xs-12 skill skill-branding">
+            <div class="skill-icon">
+                <img src="images/fingerprint.svg" />
+            </div>
+            <h3>Branding</h3>
+            <p>I can provide logos and multimedia for presenting your organization to the world. Through an iterative process using industry standard tools, I can help shape the visual expression of your service or product.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 skill skill-design">
+            <div class="skill-icon">
+                <img src="images/pen.svg" />
+            </div>
+            <h3>Design</h3>
+            <p>My original passion was to bring ideas to life and give them beautiful structure. I build aesthetic, intuitive and concise interfaces for websites and programs that make applications a pleasure to view and use.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 skill skill-development">
+            <div class="skill-icon">
+                <img src="images/code.svg" />
+            </div>
+            <h3>Development</h3>
+            <p>Years of software development have challenged and tempered my skill set. I leverage my distinguished training and experience to craft robust and effective software solutions for a variety of systems and users.</p>
+        </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 skill skill-rocket">
+            <div class="skill-icon">
+                <img src="images/rocket.svg" />
+            </div>
+            <h3>Rocket Science</h3>
+            <p>When theory meets practice, sometimes a little bit of magic can take a result from good to great. My experience in both the design and development worlds allows me to deliver ideal solutions to unique problems.</p>
+        </div>
+    </div>
+</div>

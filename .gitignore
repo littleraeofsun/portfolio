@@ -250,3 +250,21 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+
+graphics/
+
+Default\.html
+
+favicon\.png
+
+logo\.ai
+
+logo_large\.png
+
+logo_medium\.png
+
+logo_small\.png
+
+project-template\.psd
+
+website palettes\.psd
