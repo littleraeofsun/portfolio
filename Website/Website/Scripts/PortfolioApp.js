@@ -1,7 +1,8 @@
 ﻿angular.module('PortfolioApp', [
   'ngRoute',
   'PortfolioApp.Services',
-  'PortfolioApp.Controllers'
+  'PortfolioApp.Controllers',
+  'ui.bootstrap'
 ]).
 config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
     $routeProvider.

@@ -1,5 +1,10 @@
 ﻿angular.module('PortfolioApp.Controllers', [])
 
+  //MENU CONTROLLER
+  .controller('menuController', function($scope){
+      $scope.temp = "temp";
+  })
+
   //HOME CONTROLLER
   .controller('homeController', function ($scope, portfolioAPIservice) {
   	document.title = "littleraeofsun: Portfolio of Rae Melton";
