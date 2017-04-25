@@ -146,6 +146,7 @@
     <Content Include="Content\bootstrap-theme.min.css.map" />
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="images\branding.gif" />
+    <Content Include="images\code-w.svg" />
     <Content Include="images\code.gif" />
     <Content Include="images\design.gif" />
     <Content Include="images\featured\ashcorp-large.jpg" />
@@ -158,7 +159,7 @@
     <Content Include="images\featured\intersection-ink-large.jpg" />
     <Content Include="images\featured\intersection-ink-medium.jpg" />
     <Content Include="images\featured\intersection-ink-small.jpg" />
-    <Content Include="images\featured\job-app-large.jpeg" />
+    <Content Include="images\featured\job-app-large.jpg" />
     <Content Include="images\featured\job-app-medium.jpg" />
     <Content Include="images\featured\job-app-small.jpg" />
     <Content Include="images\featured\job-portal-large.jpeg" />
@@ -170,7 +171,13 @@
     <Content Include="images\featured\sketchover-large.jpg" />
     <Content Include="images\featured\sketchover-medium.jpg" />
     <Content Include="images\featured\sketchover-small.jpg" />
+    <Content Include="images\fingerprint-w.svg" />
     <Content Include="images\loading-sun.gif" />
+    <Content Include="images\pen-w.svg" />
+    <Content Include="images\quote-bg.png" />
+    <Content Include="images\rae-fun.jpg" />
+    <Content Include="images\rae-work.jpg" />
+    <Content Include="images\rocket-w.svg" />
     <Content Include="images\rocket.gif" />
     <Content Include="partials\album.html" />
     <Content Include="partials\albums.html" />
