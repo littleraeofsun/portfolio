@@ -18,6 +18,13 @@
       search
       */
 
+      portfolioAPI.getEmail = function () {
+          return $http({
+              method: 'POST',
+              url: '/api/Email'
+          });
+      }
+
       portfolioAPI.getFeaturedItems = function () {
           return $http({
               method: 'GET',

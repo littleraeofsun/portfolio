@@ -1,4 +1,4 @@
-﻿angular.module('PortfolioApp.Controllers', [])
+﻿angular.module('PortfolioApp.Controllers', ['ui.bootstrap'])
 
   //MENU CONTROLLER
   .controller('menuController', ['$scope', '$location', function($scope, $location){
@@ -121,11 +121,51 @@
   .controller('contactController', ['$scope', 'portfolioAPIservice', '$uibModal', function ($scope, portfolioAPIservice, $uibModal) {
       document.title = "Contact Me | littleraeofsun";
 
+      var $ctrl = this;
+      $ctrl.animationsEnabled = true;
+
+      $scope.showEmail = function () {
+          portfolioAPIservice.getEmail().then(function (response) {
+              if (response.status === 200) {
+                  $scope.email = response.data;
+                  var modalInstance = $uibModal.open({
+                      animation: $ctrl.animationsEnabled,
+                      ariaLabelledBy: 'modal-title',
+                      ariaDescribedBy: 'modal-body',
+                      templateUrl: 'partials/emailModal.html',
+                      controller: 'contactEmailController',
+                      size: 'sm',
+                      controllerAs: '$ctrl',
+                      resolve: {
+                          email: function () {
+                              return $scope.email;
+                          }
+                      }
+                  });
+
+                  modalInstance.result.then(function () {
+                      //$log.info('Modal dismissed at: ' + new Date());
+                  });
+              }
+          });
+      }
+
   	//run script after view loaded
   	$scope.$on('$viewContentLoaded', function () {
 
   	});
-  })
+  }])
 
+  .controller('contactEmailController', ['$scope', '$uibModalInstance', 'email', function ($scope, $uibModalInstance, email) {
+      var $ctrl = this;
+      $scope.email = email;
 
+      $scope.selectText = function () {
+          $('#ContactEmail').select().focus();
+      }      
+
+      $ctrl.ok = function () {
+          $uibModalInstance.close();
+      };
+  }])
 ;

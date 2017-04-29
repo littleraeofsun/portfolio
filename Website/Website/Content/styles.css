@@ -484,6 +484,7 @@ a:focus, a:hover {
     }
 }
 .quote-block blockquote {
+    font-family: 'Cutive', cursive;
     font-size: 2em;
     color: white;
     border: 0;
@@ -538,6 +539,40 @@ a:focus, a:hover {
     display: table-cell;
     vertical-align: middle;
     float: none;
+}
+.about-links {
+    font-size:1.2em;
+    line-height: 2em;
+    background: #333;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #666;
+    padding: 2em 1em;
+}
+.about-links a {
+    white-space: nowrap;
+}
+@media screen and (max-width:767px){
+    .col-xs-12.col-table {
+        float: left;
+    }
+    .about-links {
+        border-radius: 0;
+    }
+}
+.about-links div {
+    margin: 0.7em auto;
+}
+button.btn-default.btn-contact {
+    background-color: #f15a24;
+    border-color: #f3551d;
+    color: white;
+    transition: all 0.2s;
+}
+button.btn-default.btn-contact:hover {
+    background-color: #f7931e;
+    border-color: #fd9c2b;
+    color: #333;
 }
 
 /* Footer Styles */

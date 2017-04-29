@@ -179,6 +179,7 @@
     <Content Include="partials\album.html" />
     <Content Include="partials\albums.html" />
     <Content Include="partials\contact.html" />
+    <Content Include="partials\emailModal.html" />
     <Content Include="partials\home.html" />
     <Content Include="partials\project.html" />
     <Content Include="partials\projects.html" />
@@ -246,6 +247,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AlbumController.cs" />
     <Compile Include="Controllers\MediaController.cs" />
+    <Compile Include="Controllers\PortfolioController.cs" />
     <Compile Include="Controllers\ProjectController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Global.asax.cs">
