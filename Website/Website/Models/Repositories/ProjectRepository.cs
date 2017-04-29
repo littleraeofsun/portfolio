@@ -50,5 +50,15 @@ namespace Rae.Website.Models.Repositories
         {
             return dbSet.Where(p => p.Year == Year);
         }
+
+        public IQueryable<Project> GetPreviousProject(int Id)
+        {
+            return dbSet.Where(p => p.ProjectId < Id).OrderByDescending(p => p.ProjectId).Take(1);
+        }
+
+        public IQueryable<Project> GetNextProject(int Id)
+        {
+            return dbSet.Where(p => p.ProjectId > Id).OrderBy(p => p.ProjectId).Take(1);
+        }
     }
 }

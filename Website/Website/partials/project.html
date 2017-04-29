@@ -34,6 +34,15 @@
                         <span class="label label-default" ng-repeat="tool in project.Tools">{{tool}}</span>
                     </div>
                 </div>
+                <hr/>
+                <div class="row project-siblings">
+                    <div class="col-xs-6">
+                        <a href="#/projects/{{previous.ProjectId}}" ng-show="previous" class="btn btn-link" title="{{previous.Title}}"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> Previous</a>
+                    </div>
+                    <div class="col-xs-6 text-right">
+                        <a href="#/projects/{{next.ProjectId}}" ng-show="next" class="btn btn-link" title="{{next.Title}}">Next <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span></a>
+                    </div>
+                </div>
             </div>
         </div>
         <div class="col-sm-6 col-sm-pull-6 col-xs-12 project-gallery">

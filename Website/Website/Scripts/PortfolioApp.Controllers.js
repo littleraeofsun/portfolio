@@ -32,27 +32,40 @@
   }])
 
   //PROJECT CONTROLLER
-  .controller('projectController', ['$scope', '$routeParams', 'portfolioAPIservice', function ($scope, $routeParams, portfolioAPIservice) {
+  .controller('projectController', ['$scope', '$routeParams', '$location', 'portfolioAPIservice', function ($scope, $routeParams, $location, portfolioAPIservice) {
   	document.title = "Project Title | littleraeofsun";
   	$scope.id = $routeParams.id;
   	$scope.project = null;
+  	$scope.previous = null;
+  	$scope.next = null;
 
   	portfolioAPIservice.getProject($scope.id).then(function (response) {
-  		if (response.status === 200) {
-  			document.title = response.data.Title + " | littleraeofsun";
-  			$scope.project = response.data;
+  	    if (response.status === 200) {
+  	        if (!response.data.project) {
+  	            $location.path('/projects'); //no project exists with this project id
+  	        }
+  	        else {
+  	            document.title = response.data.project.Title + " | littleraeofsun";
+  	            $scope.project = response.data.project;
+  	            if (response.data.previous.length > 0) {
+  	                $scope.previous = response.data.previous[0];
+  	            }
+  	            if (response.data.next.length > 0) {
+  	                $scope.next = response.data.next[0];
+  	            }
 
-  			//split description in paragraphs (discard last which is empty)
-  			$scope.project.DescriptionParagraphs = $scope.project.Description.split('\n');
+  	            //split description in paragraphs (discard last which is empty)
+  	            $scope.project.DescriptionParagraphs = $scope.project.Description.split('\n');
 
-			//convert comma-delimited strings into arrays
-  			$scope.project.Tools = $scope.project.Tools.replace(/\s/g, '').split(',');
+  	            //convert comma-delimited strings into arrays
+  	            $scope.project.Tools = $scope.project.Tools.replace(/\s/g, '').split(',');
 
-  			portfolioAPIservice.getProjectMedia($scope.id).then(function (response) {
-  				if (response.status === 200) {
-  					$scope.project.Media = response.data;
-  				}
-  			});
+  	            portfolioAPIservice.getProjectMedia($scope.id).then(function (response) {
+  	                if (response.status === 200) {
+  	                    $scope.project.Media = response.data;
+  	                }
+  	            });
+  	        }
   		}
   		//TODO: handle failure
   	});
