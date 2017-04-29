@@ -8,6 +8,7 @@
     <link href="favicon.png" rel="icon" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Cutive" rel="stylesheet">
     <link href="Scripts/apps/lightbox/css/lightbox.css" rel="stylesheet" />
     <link href="Content/styles.css" rel="stylesheet" />
 </head>
@@ -23,13 +24,12 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a href="#"><img id="NavLogo" class="img-responsive" src="images/logo_small.png" /></a>
+                    <a href="#"><img id="NavLogo" class="img-responsive" alt="Littleraeofsun logo small" src="images/logo_small.png" /></a>
                 </div>
                 <div id="navbar" class="navbar-collapse collapse" uib-collapse="navCollapsed">
                     <ul class="nav navbar-nav navbar-right">
-                        <li><a href="#/projects">Projects</a></li>
-                        <li><a href="#/albums">Albums</a></li>
-                        <li><a href="#/contact">About Me</a></li>
+                        <li><a href="#/projects" ng-class="getClass('/projects')">Projects</a></li>
+                        <li><a href="#/about" ng-class="getClass('/about')">About</a></li>
                     </ul>
                     <!-- COMING SOON! :D
                     <form class="navbar-form navbar-right">
@@ -40,7 +40,7 @@
         </nav>
     </header>
     <main>
-        <ng-view></ng-view>
+        <ng-view autoscroll="true"></ng-view>
     </main>
     <footer>
         <div class="container text-center">
@@ -50,11 +50,10 @@
                     <div class="footer-tagline">Developer & Designer</div>
                 </div>
                 <div class="col-xs-12">
-                    <ul class="footer-nav">
+                    <ul class="footer-nav" ng-controller="menuController">
                         <li><a href="#/">Home</a></li>
-                        <li><a href="#/projects">Projects</a></li>
-                        <li><a href="#/albums">Albums</a></li>
-                        <li><a href="#/contact">About Me</a></li>
+                        <li><a href="#/projects" ng-class="getClass('/projects')">Projects</a></li>
+                        <li><a href="#/about" ng-class="getClass('/about')">About</a></li>
                     </ul>
                 </div>
             </div>

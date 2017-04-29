@@ -118,9 +118,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="About.html" />
-    <Content Include="Album.html" />
-    <Content Include="Albums.html" />
     <Content Include="Content\album.css" />
     <Content Include="Content\albums.css" />
     <Content Include="Content\bootstrap-theme.css" />
@@ -133,7 +130,6 @@
     <Content Include="Content\project.css" />
     <Content Include="Content\styles.css" />
     <Content Include="Content\ui-bootstrap-csp.css" />
-    <Content Include="Default2.html" />
     <Content Include="favicon.png" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -179,6 +175,7 @@
     <Content Include="images\rae-work.jpg" />
     <Content Include="images\rocket-w.svg" />
     <Content Include="images\rocket.gif" />
+    <Content Include="index.html" />
     <Content Include="partials\album.html" />
     <Content Include="partials\albums.html" />
     <Content Include="partials\contact.html" />
@@ -226,10 +223,7 @@
     <Content Include="images\logo_small.png" />
     <Content Include="images\pen.svg" />
     <Content Include="images\rocket.svg" />
-    <Content Include="Main.html" />
     <Content Include="Media\menu-music.mp3" />
-    <Content Include="Project.html" />
-    <Content Include="Projects.html" />
     <Content Include="Scripts\apps\lightbox\css\lightbox.css" />
     <Content Include="Scripts\apps\lightbox\images\close.png" />
     <Content Include="Scripts\apps\lightbox\images\loading.gif" />
@@ -246,8 +240,6 @@
     <Content Include="Scripts\responsive-img.min.js" />
     <Content Include="Scripts\apps\json-viewer\style.css" />
     <Content Include="Temp.html" />
-    <Content Include="Test.aspx" />
-    <None Include="Test.html" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -275,13 +267,6 @@
     <Compile Include="Models\Repositories\ProjectRepository.cs" />
     <Compile Include="Models\Repositories\Repository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.aspx.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Test.aspx.designer.cs">
-      <DependentUpon>Test.aspx</DependentUpon>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
