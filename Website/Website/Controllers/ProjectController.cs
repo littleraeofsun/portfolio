@@ -35,7 +35,7 @@ namespace Rae.Website.Controllers
         [Route("api/Projects/{id}")]
         public HttpResponseMessage GetProjectById(int id)
         {
-            return Request.CreateResponse(HttpStatusCode.OK, repository.Get(id));
+            return Request.CreateResponse(HttpStatusCode.OK, new { project = repository.Get(id), next = repository.GetNextProject(id), previous = repository.GetPreviousProject(id) });
         }
 
         [HttpGet()]
